@@ -1,1 +1,7 @@
 # Programación con JavaScript
+
+## Introducción
+
+JavaScript, a menudo denominado el "lenguaje de la web", se ha convertido en un pilar esencial en el mundo del desarrollo de software. Este lenguaje de programación, diseñado para brindar dinamismo e interactividad a las páginas web, ha evolucionado más allá de su función inicial y se ha convertido en una herramienta integral en el desarrollo tanto del front-end como del back-end. Desde la creación de elementos interactivos en páginas web hasta el desarrollo de aplicaciones móviles modernas utilizando tecnologías como React, JavaScript impulsa gran parte de la experiencia en línea que damos por sentado en la vida cotidiana.
+
+JavaScript proporciona a los desarrolladores una capacidad única para crear funciones dinámicas y atractivas en sus proyectos. A través de su sintaxis flexible y su capacidad para ejecutarse directamente en el navegador, permite la manipulación de elementos HTML, la gestión de eventos del usuario y la creación de aplicaciones completas. Este lenguaje, con una comunidad activa y en constante evolución, sigue desafiando los límites del desarrollo de software y ofrece oportunidades emocionantes para aquellos que buscan incursionar en el mundo de la programación. En esta introducción a JavaScript, exploraremos desde los fundamentos hasta aspectos más avanzados, permitiendo a los desarrolladores entender y aprovechar plenamente el potencial de este lenguaje versátil.
