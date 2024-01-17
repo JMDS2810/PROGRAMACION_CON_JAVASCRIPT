@@ -28,3 +28,43 @@ Este proceso te permite configurar con éxito Visual Studio Code con Code Runner
 JavaScript es esencial para la interactividad en las páginas web y se ha convertido en el lenguaje predominante en el lado del cliente desde sus inicios en 1995. Proporciona actualizaciones en tiempo real, facilitando funciones como mapas interactivos y validación de formularios. Es el único lenguaje que permite interactuar directamente con las páginas web dinámicamente en el cliente. Su popularidad se debe a la retrocompatibilidad, asegurando que las páginas web antiguas sigan funcionando. Los desarrolladores lo eligen por su facilidad de uso y accesibilidad. Se puede interactuar con el motor JavaScript a través de la consola del navegador, lo que simplifica el proceso para los principiantes.
 JavaScript se utiliza en todo tipo de sitios web, desde el lado del cliente hasta frameworks como React y en el servidor a través de Node.js y Deno. La comunidad de desarrollo de JavaScript es amplia y accesible, lo que facilita la obtención de ayuda y orientación. Además, las habilidades en JavaScript están en alta demanda, lo que lo convierte en una opción valiosa para los desarrolladores.
 En resumen, aprender JavaScript no solo es esencial para el desarrollo web, sino que también es accesible, versátil y ofrece oportunidades laborales significativas en la industria tecnológica.
+
+## Programación en JavaScript
+### Comentarios
+
+Se ha elegido los comentarios como punto de partida por dos razones: 
+
+**Su sintaxis:** la forma en que se escriben los comentarios es fácil de entender. 
+
+Escribir comentarios puede potenciarle como desarrollador.
+
+En primer lugar, explicaré la sintaxis, y después, discutiré por qué poder escribir comentarios es tan potenciador.
+
+Comentarios en JavaScript: la sintaxis
+Existen dos variedades de comentarios en JavaScript: 
+
+Comentarios de una sola línea 
+
+**Comentarios multilínea**
+
+Un comentario de una sola línea se crea cuando se añaden dos caracteres de barra diagonal uno detrás de otro, sin espacios. 
+
+// this is a comment!
+
+Todo lo que sigue a un comentario de una sola línea en JavaScript es ignorado por el navegador.
+
+Esto significa que, esencialmente, puede escribir cualquier tipo de texto, código, caracteres, emojis, lo que sea, y el navegador lo ignorará.
+
+Un comentario de varias líneas, como su nombre indica, abarca varias líneas de código y se crea con una barra diagonal y una estrella. Por ejemplo: 
+
+/*
+this
+is
+a
+multi-line
+comment
+*/
+
+También puede utilizar la sintaxis de comentario multilínea en una sola línea de código, de la siguiente manera: 
+
+/* this is a multi-line comment on a single line */
