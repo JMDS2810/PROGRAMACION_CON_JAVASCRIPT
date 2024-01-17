@@ -18,5 +18,7 @@ Antes de comenzar a programar con JavaScript, es necesario configurar el Visual 
 6. En paralelo, busca "Node.js" en tu navegador https://nodejs.org/en y descarga la versión para Windows desde el sitio oficial de Node.js. Completa el proceso de instalación.
 7. De regreso en VS Code, verifica que Code Runner esté instalado y habilitado.
 8. Abre un nuevo archivo JavaScript en VS Code, escribe código, y ejecútalo utilizando Code Runner. Puedes utilizar el comando "console.log" para imprimir mensajes en la consola.
+   
 console.log('Hola mundo')
+
 Este proceso te permite configurar con éxito Visual Studio Code con Code Runner, lo que te permite escribir y ejecutar código JavaScript.
