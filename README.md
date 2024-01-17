@@ -64,7 +64,7 @@ En la lengua inglesa, el punto y aparte -el carácter.- se utiliza para separar 
 Al separar claramente los pensamientos con el punto final, evita que se le malinterprete.
 En JavaScript, el punto y coma -el carácter;- tiene un propósito similar: se utiliza para delimitar claramente unas partes del código de otras.
 
-## Inserción Automática de Punto y Coma (ASI) en JavaScript:
+### Inserción Automática de Punto y Coma (ASI) en JavaScript
 
 La "Inserción Automática de Punto y Coma" (ASI) es una función del navegador que completa los espacios en blanco en casos donde falta un punto y coma. Esta característica tiene implicaciones en la forma en que los desarrolladores escriben su código en JavaScript.
 - **Función de Inserción Automática:**
