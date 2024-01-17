@@ -57,3 +57,28 @@ Todo lo que sigue a un comentario de una sola línea en JavaScript es ignorado p
 También puede utilizar la sintaxis de comentario multilínea en una sola línea de código, de la siguiente manera: 
 
 ![image](https://github.com/JMDS2810/PROGRAMACION_CON_JAVASCRIPT/assets/112999455/d4345e91-a587-4f1e-b474-b51c7537195b)
+
+### El uso del punto y coma
+
+En la lengua inglesa, el punto y aparte -el carácter.- se utiliza para separar pensamientos en frases.
+Al separar claramente los pensamientos con el punto final, evita que se le malinterprete.
+En JavaScript, el punto y coma -el carácter;- tiene un propósito similar: se utiliza para delimitar claramente unas partes del código de otras.
+
+## Inserción Automática de Punto y Coma (ASI) en JavaScript:
+
+La "Inserción Automática de Punto y Coma" (ASI) es una función del navegador que completa los espacios en blanco en casos donde falta un punto y coma. Esta característica tiene implicaciones en la forma en que los desarrolladores escriben su código en JavaScript.
+- **Función de Inserción Automática:**
+  - El navegador, mediante la función ASI, puede detectar y corregir la ausencia de punto y coma en el código.
+  - 
+- **Impacto en Desarrolladores:**
+  - La mayoría del tiempo, la función ASI hace que la adición o no de punto y coma no tenga una diferencia sustancial.
+  - Algunos desarrolladores argumentan que debido a la ASI, no es necesario preocuparse por agregar punto y coma.
+  - 
+- **Posturas Divergentes de Desarrolladores:**
+  - Existen dos opiniones entre los desarrolladores:
+    - Algunos sostienen que no es necesario molestarse en agregar punto y coma, confiando en la función ASI.
+    - Otros argumentan que es preferible utilizarlo siempre que sea necesario para mejorar la claridad del código.
+    - 
+- **Naturaleza Opcional y Estilística:**
+  - En general, se percibe que la adición de punto y coma en JavaScript es opcional.
+  - Se considera más como una preferencia estilística del desarrollador que como una regla estricta.
