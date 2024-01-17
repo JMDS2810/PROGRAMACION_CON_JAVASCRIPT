@@ -49,7 +49,7 @@ Comentarios de una sola línea
 
 Un comentario de una sola línea se crea cuando se añaden dos caracteres de barra diagonal uno detrás de otro, sin espacios. 
 
-// this is a comment!
+![image](https://github.com/JMDS2810/PROGRAMACION_CON_JAVASCRIPT/assets/112999455/f189f38d-1cb4-4eb1-bde3-ae89eeefe713)
 
 Todo lo que sigue a un comentario de una sola línea en JavaScript es ignorado por el navegador.
 
@@ -57,14 +57,8 @@ Esto significa que, esencialmente, puede escribir cualquier tipo de texto, códi
 
 Un comentario de varias líneas, como su nombre indica, abarca varias líneas de código y se crea con una barra diagonal y una estrella. Por ejemplo: 
 
-/*
-this
-is
-a
-multi-line
-comment
-*/
+![image](https://github.com/JMDS2810/PROGRAMACION_CON_JAVASCRIPT/assets/112999455/a1428f3f-5b0b-4694-8564-f236dfd33fa9)
 
 También puede utilizar la sintaxis de comentario multilínea en una sola línea de código, de la siguiente manera: 
 
-/* this is a multi-line comment on a single line */
+![image](https://github.com/JMDS2810/PROGRAMACION_CON_JAVASCRIPT/assets/112999455/d4345e91-a587-4f1e-b474-b51c7537195b)
