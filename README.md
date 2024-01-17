@@ -41,11 +41,10 @@ Escribir comentarios puede potenciarle como desarrollador.
 En primer lugar, explicaré la sintaxis, y después, discutiré por qué poder escribir comentarios es tan potenciador.
 
 **Comentarios en JavaScript: la sintaxis**
+
 Existen dos variedades de comentarios en JavaScript: 
-
-Comentarios de una sola línea 
-
-**Comentarios multilínea**
+1. Comentarios de una sola línea 
+2. Comentarios multilínea
 
 Un comentario de una sola línea se crea cuando se añaden dos caracteres de barra diagonal uno detrás de otro, sin espacios. 
 
