@@ -40,7 +40,7 @@ Escribir comentarios puede potenciarle como desarrollador.
 
 En primer lugar, explicaré la sintaxis, y después, discutiré por qué poder escribir comentarios es tan potenciador.
 
-Comentarios en JavaScript: la sintaxis
+**Comentarios en JavaScript: la sintaxis**
 Existen dos variedades de comentarios en JavaScript: 
 
 Comentarios de una sola línea 
@@ -51,11 +51,7 @@ Un comentario de una sola línea se crea cuando se añaden dos caracteres de bar
 
 ![image](https://github.com/JMDS2810/PROGRAMACION_CON_JAVASCRIPT/assets/112999455/f189f38d-1cb4-4eb1-bde3-ae89eeefe713)
 
-Todo lo que sigue a un comentario de una sola línea en JavaScript es ignorado por el navegador.
-
-Esto significa que, esencialmente, puede escribir cualquier tipo de texto, código, caracteres, emojis, lo que sea, y el navegador lo ignorará.
-
-Un comentario de varias líneas, como su nombre indica, abarca varias líneas de código y se crea con una barra diagonal y una estrella. Por ejemplo: 
+Todo lo que sigue a un comentario de una sola línea en JavaScript es ignorado por el navegador. Esto significa que, esencialmente, puede escribir cualquier tipo de texto, código, caracteres, emojis, lo que sea, y el navegador lo ignorará. Un comentario de varias líneas, como su nombre indica, abarca varias líneas de código y se crea con una barra diagonal y una estrella. Por ejemplo: 
 
 ![image](https://github.com/JMDS2810/PROGRAMACION_CON_JAVASCRIPT/assets/112999455/a1428f3f-5b0b-4694-8564-f236dfd33fa9)
 
