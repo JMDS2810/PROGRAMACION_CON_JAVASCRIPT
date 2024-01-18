@@ -437,7 +437,7 @@ En este caso, `contador` se inicializa antes del bucle, y dentro del bucle, se c
 
 Ambos bucles proporcionan resultados similares, pero la elección entre `for` y `while` depende del contexto y las preferencias del desarrollador. Es fundamental recordar actualizar el valor del contador en cada iteración para evitar bucles infinitos.
 
-### Bucles For en JavaScript: Automatizando Repetición
+### Bucles For en JavaScript:
 
 #### Estructura del Bucle For:
 
@@ -474,6 +474,39 @@ En este caso, el bucle inicia con `i = 10`, la condición de salida es `i > 0`, 
 **Condiciones de un Bucle For:**
 
 El bucle `for` consta de tres partes: la inicialización del contador, la condición de salida y el incremento o decremento del contador. Estas partes trabajan en conjunto para controlar la ejecución del bucle. La condición de salida es crucial para evitar bucles infinitos.
+
+### Bucle While en JavaScript: 
+
+A diferencia del bucle `for`, el bucle `while` tiene el contador definido antes del bucle y solo requiere especificar la condición de salida. La estructura básica es la siguiente:
+
+```javascript
+let contador = 3; // Inicialización del contador
+
+while (contador > 0) {
+  console.log(contador);
+  contador = contador - 1; // Actualización del contador
+}
+
+console.log('¡Feliz Año Nuevo!');
+```
+
+**Explicación del Código:**
+
+1. **Inicialización del Contador:** Se crea una variable llamada `contador` y se establece su valor en 3, que es el punto de inicio para la cuenta regresiva.
+
+2. **Condición de Salida:** La condición del bucle `while` se establece como `contador > 0`. Mientras esta condición sea verdadera, el bucle se ejecutará.
+
+3. **Bloque de Código del Bucle While:** Dentro del bucle, se utiliza `console.log(contador)` para imprimir el valor actual del contador en la consola. Luego, se actualiza el contador restando 1 en cada iteración.
+
+4. **Actualización del Contador:** `contador = contador - 1` reduce el valor del contador en 1 en cada iteración.
+
+5. **Finalización del Bucle:** Una vez que el contador llega a 0 y la condición `contador > 0` devuelve falso, el bucle while se detiene.
+
+6. **Mensaje de Feliz Año Nuevo:** Después de salir del bucle, se emite un mensaje adicional en la consola: `'¡Feliz Año Nuevo!'`.
+
+**Flujo del Bucle While:**
+
+El texto detalla cómo el bucle `while` funciona, mostrando cómo el valor del contador se actualiza en cada iteración. Comienza con 3, reduce a 2, luego a 1, y finalmente llega a 0, deteniendo el bucle.
 
 
 
