@@ -404,5 +404,40 @@ switch (place) {
 }
 ```
 
+### Bucles en JavaScript: For y While
+
+En la programación, a menudo nos encontramos con situaciones en las que necesitamos realizar tareas repetitivas. Esto es similar a las acciones cotidianas que realizamos de forma repetida, como cerrar botones, lavar platos o contar hasta uno antes de cantar "Feliz Año Nuevo". En JavaScript, para manejar estas tareas repetitivas, utilizamos construcciones de bucles.
+
+**Bucle For:**
+
+El bucle `for` es una estructura de bucle estructurada que se utiliza para repetir un bloque de código un número específico de veces. Su estructura básica incluye la inicialización de un contador, una condición que se evalúa antes de cada iteración, y una expresión de incremento o decremento. Veamos un ejemplo de un bucle `for` que cuenta hasta tres:
+
+```javascript
+for (let i = 1; i <= 3; i++) {
+  console.log(i);
+}
+```
+
+En este caso, `let i = 1` inicializa el contador, `i <= 3` establece la condición, y `i++` incrementa el contador después de cada iteración.
+
+**Bucle While:**
+
+El bucle `while`, por otro lado, también se utiliza para repetir un bloque de código mientras una condición dada sea verdadera. A diferencia del bucle `for`, el contador se inicializa fuera del bucle y se incrementa dentro del bloque. Aquí hay un ejemplo que realiza la misma tarea de contar hasta tres utilizando un bucle `while`:
+
+```javascript
+let contador = 1;
+
+while (contador <= 3) {
+  console.log(contador);
+  contador++;
+}
+```
+
+En este caso, `contador` se inicializa antes del bucle, y dentro del bucle, se comprueba la condición `contador <= 3`, y se incrementa el contador.
+
+Ambos bucles proporcionan resultados similares, pero la elección entre `for` y `while` depende del contexto y las preferencias del desarrollador. Es fundamental recordar actualizar el valor del contador en cada iteración para evitar bucles infinitos.
+
+
+
 
 
