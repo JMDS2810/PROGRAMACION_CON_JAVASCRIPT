@@ -156,3 +156,28 @@ La función console.log se presenta como una herramienta para emitir valores en 
 
 ![image](https://github.com/JMDS2810/PROGRAMACION_CON_JAVASCRIPT/assets/112999455/2d6ff2c4-7c2e-4945-a6e4-68e2972faaae)
 
+### Tipos de datos
+
+#### Tipos de Datos Fundamentales:
+
+- **Cadena (String):** Se utiliza para almacenar valores de texto. En el ejemplo, se menciona almacenar el nombre y la descripción de una guitarra.
+- **Número (Number):** Se utiliza para almacenar valores numéricos. En el ejemplo, se utiliza para almacenar el precio de la guitarra.
+ 
+**Diferencias en la Construcción:**
+ - La construcción de números implica simplemente escribir los valores numéricos.
+ - Para construir una cadena en JavaScript, los caracteres deben ir entre comillas simples o dobles.
+   
+**Rangos y Capabilidades:**
+
+- El tipo de datos número tiene un rango amplio, pero está limitado por las capacidades de cálculo de JavaScript.
+- El tipo de datos cadena tiene prácticamente un número ilimitado de combinaciones de caracteres.
+
+**Otros Tipos de Datos Primitivos:**
+
+- **Booleano (Boolean):** Útil para tomar decisiones con solo dos valores posibles: verdadero o falso.
+- **Nulo (Null):** Representa la ausencia de valor.
+- **Indefinido (Undefined):** Se refiere a una variable a la que aún no se le ha asignado un valor.
+- **BigInt:** Introducido en ES6, permite almacenar números más grandes que el tipo de datos number.
+  **Símbolo (Symbol):** Puede utilizarse como un identificador único.
+  
+**Analogía con Cajas:** Se compara cada tipo de dato con una caja, resaltando que cada uno tiene un propósito específico.
