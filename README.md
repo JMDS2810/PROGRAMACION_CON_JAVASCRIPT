@@ -292,6 +292,8 @@ console.log(1 < 2); // true
 console.log(1 > 2); // false
 ```
 
+![image](https://github.com/JMDS2810/PROGRAMACION_CON_JAVASCRIPT/assets/112999455/c5ab848f-7ed7-4caa-af25-7e829c0880dd)
+
 Los operadores de comparación, como menor que (<) y mayor que (>), permiten evaluar condiciones y obtener un resultado booleano. Este principio se extiende a otros operadores, como los de igualdad y desigualdad.
 
 ```javascript
@@ -302,6 +304,8 @@ console.log(1 !== 2); // true (desigualdad estricta)
 console.log(1 != "1"); // false (desigualdad no estricta)
 ```
 
+![image](https://github.com/JMDS2810/PROGRAMACION_CON_JAVASCRIPT/assets/112999455/55b07d58-eebc-4fe1-b318-70105c12a1bd)
+
 La distinción entre el operador de igualdad simple (==) y el de igualdad estricta (===) es esencial. El primero evalúa solo el valor, ignorando el tipo de datos, mientras que el segundo compara tanto el valor como el tipo.
 
 ```javascript
@@ -309,6 +313,8 @@ La distinción entre el operador de igualdad simple (==) y el de igualdad estric
 console.log(1 === "1"); // false
 console.log(1 !== "1"); // true
 ```
+
+![image](https://github.com/JMDS2810/PROGRAMACION_CON_JAVASCRIPT/assets/112999455/285b28eb-42e7-4c1a-afec-dd9b15e77ce3)
 
 Además, se explora el operador de desigualdad simple (!=) y el de desigualdad estricta (!==), mostrando cómo manejan las comparaciones en función del valor y el tipo de datos.
 
