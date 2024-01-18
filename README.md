@@ -181,3 +181,30 @@ La función console.log se presenta como una herramienta para emitir valores en 
   **Símbolo (Symbol):** Puede utilizarse como un identificador único.
   
 **Analogía con Cajas:** Se compara cada tipo de dato con una caja, resaltando que cada uno tiene un propósito específico.
+
+### Operaciones
+Se verán los operadores en JavaScript, estos se utilizan para realizar operaciones en variables y valores. Destacan los operadores de asignación y comparación, además de los operadores aritméticos como suma, resta, multiplicación y división. Además, se abordan los operadores lógicos "AND", "OR" y "NOT" para evaluar condiciones booleanas.
+
+1. **Operadores de Asignación y Aritméticos:**
+   - Los operadores de asignación se utilizan para realizar cálculos simples y complejos.
+   - Se verán ejemplos de operadores aritméticos (suma, resta, multiplicación, división) en el código siguiente para mostrar las operaciones matemáticas básicas
+
+2. **Operadores de Comparación y Lógicos:**
+   - Los operadores de comparación se utlizan para evaluar condiciones y devolver valores booleanos (verdadero/falso).
+   - Los operadores lógicos "AND" (&&), "OR" (||) y "NOT" (!) son presentados para combinar condiciones booleanas.
+
+**Código en JavaScript:**
+```javascript
+// Ejemplos de operadores aritméticos
+console.log(2 + 2);   // Suma: 4
+console.log(20 - 18);  // Resta: 2
+console.log(2 * 3);    // Multiplicación: 6
+console.log(8 / 1);    // División: 8
+
+// Ejemplos de operadores de comparación
+console.log(3 > 2);    // Mayor que: true
+console.log(2 > 3);    // Mayor que: false
+console.log(10 === 10); // Igualdad: true
+```
+
+Este código en JavaScript refleja los ejemplos mencionados en el texto, proporcionando resultados en la consola para cada operación.
