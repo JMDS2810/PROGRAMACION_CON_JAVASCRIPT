@@ -320,7 +320,7 @@ Además, se explora el operador de desigualdad simple (!=) y el de desigualdad e
 
 ### Condicionales
 
-En el contexto de la prorgramación, al referirse a condicionales, se utiliza reucurrentemente las sentencias `if`, las cuales permiten ejecutar un bloque de código si una condición dada es evaluada como verdadera. Por ejemplo, si queremos determinar si un estudiante aprueba o suspende un examen de conducir, podríamos usar la sentencia `if` para comprobar si su puntuación es mayor a 40.
+En el contexto de la programación, al referirse a condicionales, se utiliza reucurrentemente las sentencias `if`, las cuales permiten ejecutar un bloque de código si una condición dada es evaluada como verdadera. Por ejemplo, si queremos determinar si un estudiante aprueba o suspende un examen de conducir, podríamos usar la sentencia `if` para comprobar si su puntuación es mayor a 40.
 
 ```javascript
 let puntuacion = 45;
@@ -347,6 +347,62 @@ if (puntuacion > 40) {
 En este caso, si la puntuación es menor o igual a 40, se ejecutará el bloque de código dentro del `else`, imprimiendo un mensaje indicando que el estudiante no ha aprobado.
 
 Este enfoque de `if` y `else` proporciona una estructura básica para tomar decisiones en la programación, y se destaca su importancia como un fundamento fundamental en JavaScript.
+
+#### if, else y switch
+
+Se tienen las sentencias condicionales en JavaScript, en particular las sentencias `if`, `else if` y la sentencia `switch`. Se hace énfasis en la utilidad de estas estructuras para ejecutar bloques de código basándose en la evaluación de condiciones, ya sea verdaderas o falsas.
+
+##### Sentencia `if` y `else`
+La sentencia `if`, como anteriormente se mencionó, se utiliza para ejecutar un bloque de código si una condición dada es verdadera. Se presenta un ejemplo donde se asigna un valor a la variable `resultado` y se verifica si es mayor que 40. Además, se introduce la sentencia `else` para manejar el caso en que la condición es falsa.
+
+```javascript
+let resultado = 50;
+
+if (resultado > 40) {
+  console.log("Pasa la prueba");
+} else {
+  console.log("Usted no pasó la prueba");
+}
+```
+
+##### Sentencia `else if`
+Se aborda el escenario en el que hay múltiples condiciones y se introduce la sentencia `else if` para manejar estas situaciones de manera más estructurada. Se presenta un ejemplo con la variable `place` que puede tener varios valores y se utilizan múltiples sentencias `else if` para evaluar distintas condiciones.
+
+```javascript
+let place = "Primero";
+
+if (place === "Primero") {
+  console.log("Oro");
+} else if (place === "Segundo") {
+  console.log("Plata");
+} else if (place === "Tercero") {
+  console.log("Bronce");
+} else {
+  console.log("Sin medalla");
+}
+```
+
+##### Sentencia `switch`
+Se introduce la sentencia `switch` como una alternativa para manejar múltiples condiciones. Se proporciona un ejemplo similar al anterior, pero implementado con `switch`, destacando la diferencia de sintaxis y su capacidad para gestionar varias condiciones de manera más concisa.
+
+```javascript
+let place = "Primero";
+
+switch (place) {
+  case "Primero":
+    console.log("Oro");
+    break;
+  case "Segundo":
+    console.log("Plata");
+    break;
+  case "Tercero":
+    console.log("Bronce");
+    break;
+  default:
+    console.log("Sin medalla");
+    break;
+}
+```
 
 
 
