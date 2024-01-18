@@ -348,7 +348,7 @@ En este caso, si la puntuación es menor o igual a 40, se ejecutará el bloque d
 
 Este enfoque de `if` y `else` proporciona una estructura básica para tomar decisiones en la programación, y se destaca su importancia como un fundamento fundamental en JavaScript.
 
-#### if, else y switch
+#### if, else if y switch
 
 Se tienen las sentencias condicionales en JavaScript, en particular las sentencias `if`, `else if` y la sentencia `switch`. Se hace énfasis en la utilidad de estas estructuras para ejecutar bloques de código basándose en la evaluación de condiciones, ya sea verdaderas o falsas.
 
