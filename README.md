@@ -588,7 +588,45 @@ for (let i = 2023; i < 2025; i++) {
 
 - La utilización de nombres cortos como `i` y `j` es una convención común y práctica estándar en desarrollo.
 
+### Funciones en JavaScript 
 
+Se explicará el concepto de funciones en JavaScript y cómo se pueden utilizar para evitar la repetición de código. 
+
+1. **Creación de una función sin parámetros:**
+
+   ```javascript
+   // Declaración de la función
+   function sumarDosNumeros() {
+       // Cuerpo de la función
+       var a = 10;
+       var b = 20;
+       var resultado = a + b;
+       console.log(resultado);
+   }
+
+   // Llamada a la función
+   sumarDosNumeros();
+   ```
+
+   Este código crea una función llamada `sumarDosNumeros` que suma dos números fijos (10 y 20) y muestra el resultado en la consola.
+
+2. **Creación de una función con parámetros:**
+
+   ```javascript
+   // Declaración de la función con parámetros
+   function sumarDosNumerosConParametros(a, b) {
+       // Cuerpo de la función utilizando parámetros
+       var resultado = a + b;
+       console.log(resultado);
+   }
+
+   // Llamada a la función con argumentos
+   sumarDosNumerosConParametros(10, 20);
+   ```
+
+   Este código crea una función llamada `sumarDosNumerosConParametros` que acepta dos parámetros (a y b) y muestra la suma de los valores proporcionados como argumentos al llamar la función.
+
+Estos ejemplos demuestran cómo declarar funciones, utilizar parámetros para hacerlas más flexibles y cómo llamar a funciones con argumentos. Las funciones permiten encapsular bloques de código que pueden ser reutilizados con diferentes valores, lo que hace que el código sea más eficiente y fácil de mantener.
 
 
 
