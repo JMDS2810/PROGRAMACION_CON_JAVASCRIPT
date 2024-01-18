@@ -208,3 +208,47 @@ console.log(10 === 10); // Igualdad: true
 ```
 
 Este código en JavaScript refleja los ejemplos mencionados en el texto, proporcionando resultados en la consola para cada operación.
+
+![image](https://github.com/JMDS2810/PROGRAMACION_CON_JAVASCRIPT/assets/112999455/53d6bcf8-27a7-4fde-a405-c80dbd970893)
+
+### Números en JavaScript
+
+1. **Representación de Números:**
+   Pueden ser enteros y decimales. Por ejemplo, 123, 123.456.
+
+2. **Operaciones Matemáticas:**
+   - Suma: `+`.
+   - Resta: `-`.
+   - Multiplicación: `*`.
+   - División: `/`.
+   - Exponenciación: `**`.
+   - Resto o módulo: `%`.
+     
+3. **Uso de Paréntesis:**
+   El uso de los paréntesis y su importancia radica en son de mucha ayuda para controlar el orden de las operaciones y al realizar cálculos más complejos.
+       
+- **Código en JavaScript:**
+  ```javascript
+  // Ejemplo de números y operaciones matemáticas en JavaScript
+
+  // Representación de Números
+  console.log(123);
+  console.log(123.456);
+
+  // Operaciones Matemáticas
+  console.log(2 + 2);      // Suma
+  console.log(4 - 2);      // Resta
+  console.log(4 * 4);      // Multiplicación
+  console.log(16 / 4);     // División
+  console.log(10 ** 2);    // Exponenciación
+  console.log(9 % 8);      // Resto o módulo
+
+  // Uso de Paréntesis
+  console.log((2 * 4) + 8);  // Control de Prioridad
+  ```
+
+- **Observaciones:**
+  - Los operadores matemáticos básicos (`+`, `-`, `*`, `/`) son fundamentales.
+  - El operador de módulo (`%`) es útil para obtener el resto de una división.
+  - El uso de paréntesis permite controlar el orden de las operaciones.
+
