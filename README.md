@@ -628,6 +628,101 @@ Se explicará el concepto de funciones en JavaScript y cómo se pueden utilizar 
 
 Estos ejemplos demuestran cómo declarar funciones, utilizar parámetros para hacerlas más flexibles y cómo llamar a funciones con argumentos. Las funciones permiten encapsular bloques de código que pueden ser reutilizados con diferentes valores, lo que hace que el código sea más eficiente y fácil de mantener.
 
+Ya que se tiene mucho más contexto de las funciones, se entiende que las funciones en JavaScript son bloques de código reutilizables que realizan una tarea específica. Proporcionan modularidad al dividir el código en partes más pequeñas y autónomas. A continuación, se detallan algunos aspectos adicionales sobre funciones en JavaScript:
+
+#### Declaración de Funciones
+
+La sintaxis básica para declarar una función es la siguiente:
+
+```javascript
+function nombreDeLaFuncion(parametro1, parametro2, ...) {
+    // Cuerpo de la función
+    // Operaciones y lógica de la función
+    return resultado; // Opcional: Devolver un valor
+}
+```
+
+- `nombreDeLaFuncion`: Es el identificador de la función, un nombre descriptivo que se utiliza para invocar la función.
+- `parametro1`, `parametro2`: Son los parámetros que la función espera recibir. Pueden ser utilizados en el cuerpo de la función.
+- `return resultado`: Opcionalmente, la función puede devolver un resultado utilizando la palabra clave `return`.
+
+#### Invocación de Funciones
+
+Para ejecutar o invocar una función, se utiliza su nombre seguido de paréntesis que pueden contener argumentos. Los argumentos son valores que se pasan a la función para que los utilice en su lógica interna.
+
+```javascript
+nombreDeLaFuncion(valor1, valor2, ...);
+```
+
+#### Ámbito de Variables
+
+Las variables declaradas dentro de una función tienen un alcance local. Esto significa que solo son accesibles dentro de esa función. Las variables declaradas fuera de una función tienen un alcance global y son accesibles desde cualquier parte del código.
+
+```javascript
+function ejemplo() {
+    var variableLocal = "Solo visible dentro de la función";
+    console.log(variableLocal);
+}
+
+console.log(variableLocal); // Error: variableLocal no definida fuera de la función
+```
+
+#### Funciones Anónimas
+
+Una función anónima es una función sin un nombre declarado. Se pueden asignar a variables o pasar como argumentos a otras funciones.
+
+```javascript
+var funcionAnonima = function(parametro) {
+    // Cuerpo de la función anónima
+};
+
+funcionAnonima(valor);
+```
+
+#### Funciones Flecha (Arrow Functions)
+
+Las funciones flecha son una forma más concisa de escribir funciones en JavaScript. Tienen una sintaxis más corta y heredan el contexto de `this` del ámbito circundante.
+
+```javascript
+const suma = (a, b) => a + b;
+console.log(suma(5, 3)); // 8
+```
+
+#### Callback Functions
+
+Las funciones pueden ser pasadas como argumentos a otras funciones. Cuando una función se pasa como argumento y se ejecuta más tarde, se llama función de devolución de llamada o callback.
+
+```javascript
+function operacionAsync(valor, callback) {
+    // Simulación de operación asíncrona
+    setTimeout(() => {
+        const resultado = valor * 2;
+        callback(resultado);
+    }, 1000);
+}
+
+operacionAsync(5, function(resultado) {
+    console.log(resultado); // Se ejecuta cuando la operación asíncrona está completa
+});
+```
+
+#### Recursividad
+
+Una función puede llamarse a sí misma, lo que se conoce como recursividad. Es útil para resolver problemas que se pueden dividir en subproblemas más pequeños.
+
+```javascript
+function factorial(n) {
+    if (n <= 1) {
+        return 1;
+    } else {
+        return n * factorial(n - 1);
+    }
+}
+
+console.log(factorial(5)); // 120
+```
+
+
 
 
 
