@@ -283,5 +283,34 @@ Un aspecto a considerar es el manejo de comillas y apóstrofos en las cadenas. S
   let nuevaCadena = "Hace un día precioso. It's amazing!";
   ```
 
+### Booleanos
+El tipo de dato booleano en JavaScript desempeña un papel fundamental al evaluar la veracidad o falsedad de afirmaciones. En este contexto, se centra en cómo obtener resultados de comparaciones para determinar si dos valores son iguales o no. Un valor booleano, en esencia, puede ser verdadero o falso, y esta distinción es clave para la lógica de programación.
+
+```javascript
+// Ejemplos de comparaciones con operador menor que y mayor que
+console.log(1 < 2); // true
+console.log(1 > 2); // false
+```
+
+Los operadores de comparación, como menor que (<) y mayor que (>), permiten evaluar condiciones y obtener un resultado booleano. Este principio se extiende a otros operadores, como los de igualdad y desigualdad.
+
+```javascript
+// Ejemplos de operadores de igualdad y desigualdad
+console.log(1 === 2); // false (igualdad estricta)
+console.log(1 == "1"); // true (igualdad no estricta)
+console.log(1 !== 2); // true (desigualdad estricta)
+console.log(1 != "1"); // false (desigualdad no estricta)
+```
+
+La distinción entre el operador de igualdad simple (==) y el de igualdad estricta (===) es esencial. El primero evalúa solo el valor, ignorando el tipo de datos, mientras que el segundo compara tanto el valor como el tipo.
+
+```javascript
+// Ejemplos de operadores de igualdad estricta y desigualdad estricta
+console.log(1 === "1"); // false
+console.log(1 !== "1"); // true
+```
+
+Además, se explora el operador de desigualdad simple (!=) y el de desigualdad estricta (!==), mostrando cómo manejan las comparaciones en función del valor y el tipo de datos.
+
 
 
