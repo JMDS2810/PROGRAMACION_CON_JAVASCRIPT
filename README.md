@@ -139,3 +139,30 @@ También, se destaca el uso del operador de asignación (=) para asignar valores
 La función console.log se presenta como una herramienta para emitir valores en la consola. Se muestra cómo combinar texto estático con variables dinámicas y cómo reasignar valores a las variables para lograr resultados diferentes. 
 
 ![image](https://github.com/JMDS2810/PROGRAMACION_CON_JAVASCRIPT/assets/112999455/cc0681a8-a9c4-45aa-95a9-3da35edf8417)
+
+**Ejercicio:**
+- Declare una nueva variable denominada petDog y dele el nombre Rex.
+- Declare una nueva variable llamada petCat y dele el nombre Pepper.
+- Consola.log la variable petDog.
+- Consola.log la variable petCat.
+- Consola.log el texto "My pet dog's name is: " y la variable petDog.
+- Consola.log el texto "My pet cat's name is: " y la variable petCat.
+- Declare otra variable y nómbrela catSound. Asígnele la cadena "purr".
+- Declare otra variable y nómbrela dogSound. Asígnele la cadena de texto "woof".
+- Consola.log la variable petDog, luego la cadena "says", luego la variable dogSound.
+- Consola.log la variable petCat, luego la cadena "says", luego la variable catSound.
+- Reasigne el valor almacenado en catSound a la cadena "meow".
+- Consola.log la variable petCat, luego la cadena "now says", luego la variable catSound.
+
+var petDog = "Rex";
+var petCat = "Pepper";
+console.log(petDog);
+console.log(petCat);
+console.log("My pet dog's name is: " + petDog);
+console.log("My pet cat's name is: " + petCat);
+var catSound = "purr";
+var dogSound = "woof";
+console.log(petDog + " says " + dogSound);
+console.log(petCat + " says " + catSound);
+catSound = "meow";
+console.log(petCat + " now says " + catSound);
