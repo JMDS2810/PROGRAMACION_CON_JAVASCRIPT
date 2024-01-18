@@ -318,5 +318,35 @@ console.log(1 !== "1"); // true
 
 Además, se explora el operador de desigualdad simple (!=) y el de desigualdad estricta (!==), mostrando cómo manejan las comparaciones en función del valor y el tipo de datos.
 
+### Condicionales
+
+En el contexto de la prorgramación, al referirse a condicionales, se utiliza reucurrentemente las sentencias `if`, las cuales permiten ejecutar un bloque de código si una condición dada es evaluada como verdadera. Por ejemplo, si queremos determinar si un estudiante aprueba o suspende un examen de conducir, podríamos usar la sentencia `if` para comprobar si su puntuación es mayor a 40.
+
+```javascript
+let puntuacion = 45;
+
+if (puntuacion > 40) {
+  console.log("¡Felicidades! Has aprobado el examen.");
+}
+```
+
+Aquí, el bloque de código dentro del `if` se ejecutará solo si la condición (`puntuacion > 40`) es verdadera. En este caso, imprimirá en la consola el mensaje de aprobación.
+
+Luego, se introduce la sentencia `else`, que permite ejecutar un bloque de código alternativo si la condición en el `if` resulta ser falsa. Siguiendo el ejemplo anterior:
+
+```javascript
+let puntuacion = 35;
+
+if (puntuacion > 40) {
+  console.log("¡Felicidades! Has aprobado el examen.");
+} else {
+  console.log("Lo siento, no has aprobado esta vez.");
+}
+```
+
+En este caso, si la puntuación es menor o igual a 40, se ejecutará el bloque de código dentro del `else`, imprimiendo un mensaje indicando que el estudiante no ha aprobado.
+
+Este enfoque de `if` y `else` proporciona una estructura básica para tomar decisiones en la programación, y se destaca su importancia como un fundamento fundamental en JavaScript.
+
 
 
