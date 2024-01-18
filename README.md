@@ -252,3 +252,36 @@ Este código en JavaScript refleja los ejemplos mencionados en el texto, proporc
   - El operador de módulo (`%`) es útil para obtener el resto de una división.
   - El uso de paréntesis permite controlar el orden de las operaciones.
 
+![image](https://github.com/JMDS2810/PROGRAMACION_CON_JAVASCRIPT/assets/112999455/fad18c9b-a218-4b82-ad55-690b88364696)
+
+### Cadenas y cuerdas
+
+En JavaScript, las cadenas son fundamentales y se utilizan para representar y manipular secuencias de caracteres en el código. Estas cadenas se definen encerrando los caracteres entre comillas simples ('') o dobles (""). Este tipo de dato es común y esencial en el contexto de la programación.
+
+Para crear una cadena vacía, se utilizan comillas simples o dobles sin ningún carácter entre ellas. En cambio, para una cadena con contenido, se pueden incluir letras, símbolos y números. Es importante tener en cuenta que las cadenas no admiten saltos de línea, y si se intenta introducir un salto de línea en el código, se generará un error.
+
+Un aspecto a considerar es el manejo de comillas y apóstrofos en las cadenas. Si se necesita incluir una contracción como "it's", es necesario ser precavido para evitar confusiones y errores en el código. Por ejemplo, anidar comillas simples dentro de comillas dobles o viceversa puede ser necesario para resolver estos problemas.
+
+- **Código en JavaScript:**
+  ```javascript
+  // Ejemplo de Cadenas en JavaScript
+
+  // Cadena vacía
+  let cadenaVacia = '';
+
+  // Cadena no vacía
+  let saludo = '¡Hola!';
+
+  // Cadena con símbolos y números
+  let cadenaCompleja = '¡Hola!@#$%^&123';
+
+  // Problema con saltos de línea
+  // let cadenaConSalto = 'Hola
+  // Mundo'; // Error
+
+  // Solución al problema de apóstrofos
+  let nuevaCadena = "Hace un día precioso. It's amazing!";
+  ```
+
+
+
