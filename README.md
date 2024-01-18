@@ -128,3 +128,14 @@ He aquí un ejemplo de salida de tres trozos de texto separados utilizando el ca
 ![image](https://github.com/JMDS2810/PROGRAMACION_CON_JAVASCRIPT/assets/112999455/f3570d54-0b26-4b8a-8a7c-3646daa0cf87)
 
 La salida de este comando seguirá siendo: Hello there, World.
+
+### Variables
+En el proceso de aprendizaje de JavaScript, se compara un programa JavaScript vacío con el primer nivel de un juego sandbox, donde el mundo está vacío pero hay una estructura subyacente para construir. El programador, al utilizar JavaScript, tiene la tarea de construir ese mundo. Las variables desempeñan un papel crucial en este proceso, permitiendo almacenar y reutilizar datos.
+
+Veremos como declarar e inicializar variables en JavaScript. Se utiliza el ejemplo siguiente, en el cual se asigna el nombre "John" a una variable llamada "persona". Se observa la distinción entre la declaración y la asignación de variables. 
+
+También, se destaca el uso del operador de asignación (=) para asignar valores a variables y cómo estas variables pueden utilizarse en el código.
+
+La función console.log se presenta como una herramienta para emitir valores en la consola. Se muestra cómo combinar texto estático con variables dinámicas y cómo reasignar valores a las variables para lograr resultados diferentes. 
+
+![image](https://github.com/JMDS2810/PROGRAMACION_CON_JAVASCRIPT/assets/112999455/cc0681a8-a9c4-45aa-95a9-3da35edf8417)
