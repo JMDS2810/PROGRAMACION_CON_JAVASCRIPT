@@ -330,6 +330,8 @@ if (puntuacion > 40) {
 }
 ```
 
+![image](https://github.com/JMDS2810/PROGRAMACION_CON_JAVASCRIPT/assets/112999455/f29ee335-86dc-4a02-9667-2cb9f68cad02)
+
 Aquí, el bloque de código dentro del `if` se ejecutará solo si la condición (`puntuacion > 40`) es verdadera. En este caso, imprimirá en la consola el mensaje de aprobación.
 
 Luego, se introduce la sentencia `else`, que permite ejecutar un bloque de código alternativo si la condición en el `if` resulta ser falsa. Siguiendo el ejemplo anterior:
@@ -343,6 +345,8 @@ if (puntuacion > 40) {
   console.log("Lo siento, no has aprobado esta vez.");
 }
 ```
+
+![image](https://github.com/JMDS2810/PROGRAMACION_CON_JAVASCRIPT/assets/112999455/f73daf55-9dbd-4e34-a3b9-fa8ba3e75940)
 
 En este caso, si la puntuación es menor o igual a 40, se ejecutará el bloque de código dentro del `else`, imprimiendo un mensaje indicando que el estudiante no ha aprobado.
 
@@ -365,6 +369,8 @@ if (resultado > 40) {
 }
 ```
 
+![image](https://github.com/JMDS2810/PROGRAMACION_CON_JAVASCRIPT/assets/112999455/4cbf89a9-b9bc-4f9b-8778-d7ee939c6ebf)
+
 ##### Sentencia `else if`
 Se aborda el escenario en el que hay múltiples condiciones y se introduce la sentencia `else if` para manejar estas situaciones de manera más estructurada. Se presenta un ejemplo con la variable `place` que puede tener varios valores y se utilizan múltiples sentencias `else if` para evaluar distintas condiciones.
 
@@ -381,6 +387,8 @@ if (place === "Primero") {
   console.log("Sin medalla");
 }
 ```
+
+![image](https://github.com/JMDS2810/PROGRAMACION_CON_JAVASCRIPT/assets/112999455/0a382e11-8af0-4da4-8bf0-0b63d5195b87)
 
 ##### Sentencia `switch`
 Se introduce la sentencia `switch` como una alternativa para manejar múltiples condiciones. Se proporciona un ejemplo similar al anterior, pero implementado con `switch`, destacando la diferencia de sintaxis y su capacidad para gestionar varias condiciones de manera más concisa.
@@ -403,6 +411,8 @@ switch (place) {
     break;
 }
 ```
+
+![image](https://github.com/JMDS2810/PROGRAMACION_CON_JAVASCRIPT/assets/112999455/e2142bb3-f4bb-4783-8535-0504ba179f20)
 
 ### Bucles en JavaScript: For y While
 
@@ -432,6 +442,8 @@ while (contador <= 3) {
   contador++;
 }
 ```
+
+![image](https://github.com/JMDS2810/PROGRAMACION_CON_JAVASCRIPT/assets/112999455/29fa323d-ac61-4dde-856f-183b591ea37e)
 
 En este caso, `contador` se inicializa antes del bucle, y dentro del bucle, se comprueba la condición `contador <= 3`, y se incrementa el contador.
 
@@ -469,6 +481,8 @@ for (let i = 10; i > 0; i--) {
 console.log('Feliz Año Nuevo');
 ```
 
+![image](https://github.com/JMDS2810/PROGRAMACION_CON_JAVASCRIPT/assets/112999455/be71cbf9-c3c2-4f14-a917-f31c7f79799e)
+
 En este caso, el bucle inicia con `i = 10`, la condición de salida es `i > 0`, y `i--` decrementa el contador en cada iteración.
 
 **Condiciones de un Bucle For:**
@@ -490,23 +504,89 @@ while (contador > 0) {
 console.log('¡Feliz Año Nuevo!');
 ```
 
-**Explicación del Código:**
+![image](https://github.com/JMDS2810/PROGRAMACION_CON_JAVASCRIPT/assets/112999455/e7618071-4b2b-40b4-97ba-ff72b98d3622)
 
-1. **Inicialización del Contador:** Se crea una variable llamada `contador` y se establece su valor en 3, que es el punto de inicio para la cuenta regresiva.
+**Explicación del código:**
 
-2. **Condición de Salida:** La condición del bucle `while` se establece como `contador > 0`. Mientras esta condición sea verdadera, el bucle se ejecutará.
+1. **Inicialización del contador:** Se crea una variable llamada `contador` y se establece su valor en 3, que es el punto de inicio para la cuenta regresiva.
 
-3. **Bloque de Código del Bucle While:** Dentro del bucle, se utiliza `console.log(contador)` para imprimir el valor actual del contador en la consola. Luego, se actualiza el contador restando 1 en cada iteración.
+2. **Condición de salida:** La condición del bucle `while` se establece como `contador > 0`. Mientras esta condición sea verdadera, el bucle se ejecutará.
 
-4. **Actualización del Contador:** `contador = contador - 1` reduce el valor del contador en 1 en cada iteración.
+3. **Bloque de código del bucle While:** Dentro del bucle, se utiliza `console.log(contador)` para imprimir el valor actual del contador en la consola. Luego, se actualiza el contador restando 1 en cada iteración.
 
-5. **Finalización del Bucle:** Una vez que el contador llega a 0 y la condición `contador > 0` devuelve falso, el bucle while se detiene.
+4. **Actualización del contador:** `contador = contador - 1` reduce el valor del contador en 1 en cada iteración.
 
-6. **Mensaje de Feliz Año Nuevo:** Después de salir del bucle, se emite un mensaje adicional en la consola: `'¡Feliz Año Nuevo!'`.
+5. **Finalización del bucle:** Una vez que el contador llega a 0 y la condición `contador > 0` devuelve falso, el bucle while se detiene.
+
+6. **Mensaje de feliz año nuevo:** Después de salir del bucle, se emite un mensaje adicional en la consola: `'¡Feliz Año Nuevo!'`.
 
 **Flujo del Bucle While:**
 
 Se detalla cómo el bucle `while` funciona, mostrando cómo el valor del contador se actualiza en cada iteración. Comienza con 3, reduce a 2, luego a 1, y finalmente llega a 0, deteniendo el bucle.
+
+### Bucles Anidados en JavaScript
+
+Cuando se necesitan realizar varias tareas simultáneamente, como procesar dos conjuntos de datos A y B, los bucles anidados en JavaScript ofrecen una solución eficiente. A través del uso de bucles anidados, se pueden ejecutar tareas dentro de tareas, proporcionando flexibilidad en la automatización de código.
+
+**Ejemplo Práctico: Plan de Dos Semanas**
+
+**Código utilizando bucles anidados con bucles for:**
+
+```javascript
+for (let i = 1; i <= 2; i++) { // Bucle exterior para las semanas
+  for (let j = 1; j <= 5; j++) { // Bucle interior para los días
+    console.log(`Semana ${i}, Día ${j}`);
+  }
+}
+```
+
+![image](https://github.com/JMDS2810/PROGRAMACION_CON_JAVASCRIPT/assets/112999455/fe602d9d-fa3c-4588-8e22-a919d1a86e6c)
+
+**Explicación:**
+
+- Se utilizan dos bucles `for`. El primero (bucle exterior) itera sobre las semanas (1 y 2).
+- El segundo (bucle interior) itera sobre los días (1 al 5).
+- La consola emite la salida correspondiente para cada semana y día.
+
+### **Ejemplo Adicional: Visualización de meses de verano a lo largo de dos años**
+
+**Código con bucles anidados for:**
+
+```javascript
+for (let year = 2023; year < 2025; year++) { // Bucle exterior para los años
+  console.log(`Año: ${year}`);
+  
+  for (let month = 6; month < 9; month++) { // Bucle interior para los meses de verano
+    console.log(`------${month}`);
+  }
+}
+```
+
+![image](https://github.com/JMDS2810/PROGRAMACION_CON_JAVASCRIPT/assets/112999455/896b4a58-699c-4400-82a7-5ba92a7974da)
+
+**Explicación:**
+
+- Se utilizan dos bucles `for`, uno para los años (2023 y 2024) y otro para los meses de verano (junio, julio y agosto).
+- La consola emite la salida correspondiente para cada año y mes.
+
+### **Simplificación de Nombres de Variables:**
+
+```javascript
+for (let i = 2023; i < 2025; i++) {
+  console.log(`Año: ${i}`);
+  
+  for (let j = 6; j < 9; j++) {
+    console.log(`------${j}`);
+  }
+}
+```
+
+![image](https://github.com/JMDS2810/PROGRAMACION_CON_JAVASCRIPT/assets/112999455/8af64c51-20f8-4ebe-befd-df57b5d6d83a)
+
+
+**Notas:**
+
+- La utilización de nombres cortos como `i` y `j` es una convención común y práctica estándar en desarrollo.
 
 
 
