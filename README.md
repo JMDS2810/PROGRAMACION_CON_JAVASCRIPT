@@ -1142,27 +1142,11 @@ Explicación:
 
 El operador `typeof` es útil para verificar el tipo de datos de una variable antes de realizar operaciones específicas para ese tipo, y se puede utilizar para lidiar con situaciones donde se espera un tipo de datos particular.
 
-El texto menciona el uso de las sentencias `try`, `catch`, y `throw` en JavaScript para manejar errores y evitar que el programa se detenga abruptamente. A continuación, se proporcionan ejemplos de códigos en JavaScript que ilustran estos conceptos:
-
-1. **Ejemplo de uso de `try` y `catch`:**
-
-   ```javascript
-   try {
-     // Bloque de código que puede lanzar un error
-     console.log(a + b);
-   } catch (err) {
-     // Bloque catch que maneja el error
-     console.error("Hubo un error:", err);
-   } finally {
-     // Bloque opcional de código que se ejecuta siempre, ocurra o no un error
-     console.log("Mi programa no se detiene");
-   }
-   ```
-### Fallor y errores
+### Fallor y errores 
 
 Un fallo hace que el código se comporte de manera inesperada pero siga ejecutándose, mientras que un error detiene la ejecución del código. Se puede poner de ejemplo a una función suma dos números y que genera el resultado, pero al pasar una cadena y un número, debido a la coerción de JavaScript, se produce una concatenación en lugar de una suma, y el programa sigue ejecutándose.
 
-Luego, se introduce un escenario donde se intenta usar variables (`c` y `d`) que no han sido declaradas ni asignadas, lo que lleva a un error de referencia. Este tipo de error ocurre cuando intentas usar un valor que no está definido en el código.
+Luego, se tiene un escenario donde se intenta usar variables (`c` y `d`) que no han sido declaradas ni asignadas, lo que lleva a un error de referencia. Este tipo de error ocurre cuando intentas usar un valor que no está definido en el código.
 
 Se destaca que JavaScript envía mensajes de error a la consola para informar sobre errores, lo que ayuda a identificar problemas en el código. Se tienen otros tipos de errores comunes, como errores de sintaxis y errores de tipo. Un error de sintaxis ocurre cuando se escribe un fragmento de código que JavaScript no puede leer, como olvidar un símbolo de comillas finales. Un error de tipo ocurre cuando intentas realizar una operación no válida en un tipo de dato, como ejecutar el método `pop` en un número.
 
@@ -1204,7 +1188,7 @@ En este ejemplo, el bloque `try` contiene una operación (`console.log(a + b)`) 
    }
    ```
 
-   En este ejemplo, el bloque `try` contiene la palabra clave `throw`, que se utiliza para lanzar manualmente un error. El bloque `catch` captura el error, lo almacena en una variable llamada `err` y maneja el error. El bloque `finally` es opcional y se ejecutará independientemente de si se lanzó un error o no.
+En este ejemplo, el bloque `try` contiene la palabra clave `throw`, que se utiliza para lanzar manualmente un error. El bloque `catch` captura el error, lo almacena en una variable llamada `err` y maneja el error. El bloque `finally` es opcional y se ejecutará independientemente de si se lanzó un error o no.
 
 #### Errores de sintaxis, lógicos y de ejecución
 
