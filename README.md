@@ -1142,7 +1142,7 @@ Explicación:
 
 El operador `typeof` es útil para verificar el tipo de datos de una variable antes de realizar operaciones específicas para ese tipo, y se puede utilizar para lidiar con situaciones donde se espera un tipo de datos particular.
 
-### Fallor y errores 
+### Fallos y errores 
 
 Un fallo hace que el código se comporte de manera inesperada pero siga ejecutándose, mientras que un error detiene la ejecución del código. Se puede poner de ejemplo a una función suma dos números y que genera el resultado, pero al pasar una cadena y un número, debido a la coerción de JavaScript, se produce una concatenación en lugar de una suma, y el programa sigue ejecutándose.
 
