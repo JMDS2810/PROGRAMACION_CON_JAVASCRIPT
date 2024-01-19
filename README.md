@@ -777,7 +777,7 @@ var table = {
 }
 ```
 
-Para acceder al objeto table, puedo simplemente registrar por consola el objeto completo:  
+Para acceder al objeto table, se puede simplemente registrar por consola el objeto completo:  
 
 ```javascript
 console.log(table);//display the object in the developer console 
@@ -789,13 +789,13 @@ El valor devuelto es el objetotable completo:
 {legs: 3, color: 'brown', priceUSD: 100}
 ```
 
-Además, puedo registrar por consola cualquier propiedad individual, así:  
+Además, se puede registrar por consola cualquier propiedad individual, así:  
 
 ```javascript
 console.log(table.color); // 'brown'
 ```
 
-Ahora que tengo esta "receta sintáctica", puedo construir cualquier otro objeto de forma similar: 
+Ahora que se tiene esta "receta sintáctica", se puede construir cualquier otro objeto de forma similar: 
 
 ```javascript
 var house = {
@@ -829,6 +829,510 @@ house.windows = 11;
 console.log(house); // {rooms: 3, color: "brown", priceUSD: 10000, windows: 11}
 ```
 
+#### Literales de objeto y la notación de corchetes
 
+Existe una sintaxis alternativa a la notación de puntos que he utilizado hasta ahora. Esta sintaxis alternativa se conoce comola notación de corchetes.
 
+Para entender cómo funciona, lo mejor es utilizar un ejemplo, así que volverá a pasar por el proceso de codificación del objeto house2, de la misma forma que se hizo con la notación de puntos, sólo que esta vez, se utilizará la notación de corchetes.
+
+```javascript
+var house2 = {};
+house2["rooms"] = 4;
+house2['color']= "pink";
+house2["priceUSD"] = 12345;
+console.log(house2); // {rooms: 4, color: 'pink', priceUSD: 12345}
+```
+
+Debe de tener en cuenta que utilizando la notación de corchetes, esencialmente sólo envuelvo la clave de cada propiedad **como una cadena**, dentro de las comillas simples o dobles - al igual que con las cadenas regulares. 
+
+A continuación, se envuelve toda la clave de la propiedad dentro de un corchete de apertura y otro de cierre.
+
+Se puede tanto acceder como actualizar propiedades en objetos utilizando la notación de puntos, o la notación de corchetes, o una combinación de ambas, como en el siguiente ejemplo:
+
+```javascript
+var car = {};
+car.color = "red";
+car["color"] = "green";
+car["speed"] = 200;
+car.speed = 100;
+console.log(car); // {color: "green", speed: 100}
+```
+
+Con la notación de corchetes, también se puede añadir caracteres de espacio dentro de los nombres de las propiedades, de esta manera:  
+
+```javascript
+car["number of doors"] = 4;
+console.log(car); // {color: 'green', speed: 100, number of doors: 4}
+```
+
+Además, se pueden añadir números (como el tipo de datos cadena) como claves de propiedades:  
+
+```javascript
+car["2022"] = 1901;
+console.log(car); // {2022: 1901, color: 'green', speed: 100, number of doors: 4}
+```
+
+Sin embargo, se desaconseja hacer esto, debido a las razones obvias de que tener una clave de propiedad como una cadena de números no transmite realmente mucha información útil. Por último, hay una cosa realmente útil que tiene la notación de corchetes pero que no está disponible en la notación de puntos: Puede evaluar expresiones.
+
+Para entender lo que eso significa, considere el siguiente ejemplo:
+
+```javascript
+var arrOfKeys = ['speed', 'altitude', 'color'];
+var drone = {
+    speed: 100,
+    altitude: 200,
+    color: "red"
+}
+for (var i = 0; i < arrOfKeys.length; i++) {
+    console.log(drone[arrOfKeys[i]])
+}
+```
+
+El código anterior dará como resultado la siguiente salida: 
+
+```javascript
+100
+200
+red
+```
+
+Utilizando el hecho de que la notación de corchetes puede evaluar expresiones, se puede acceder a la propiedad arrOfKeys[i] del objeto drone. 
+
+Este valor cambió en cada bucle mientras se ejecutaba el bucle for.
+
+Concretamente, la primera vez que se ejecutó, se evaluó así: 
+
+- El valor de i era 0
+- El valor de arrOfKeys[i] era arrOfKeys[0], que era "speed"
+- Así, drone[arrOfKeys[i]] se evaluó como drone["speed"], que es igual a 100
+
+Esto permitió realizar un bucle sobre cada uno de los valores almacenados dentro del objeto drone, basándose en cada una de las claves de sus propiedades.
+
+#### Matrices
+
+En JavaScript, las matrices son objetos. Eso significa que las matrices también tienen algunas propiedades y métodos incorporados.
+
+Uno de los métodos incorporados más utilizados en las matrices son los métodos push() y pop().
+
+Para añadir nuevos elementos a una matriz, puedo utilizar el método push():
+
+```javascript
+var fruits = [];
+fruits.push("apple"); // ['apple']
+fruits.push('pear'); // ['apple', 'pear']
+```
+
+Para eliminar el último elemento de una matriz, puedo utilizar el método pop(): 
+
+```javascript
+fruits.pop();
+console.log(fruits); // ['apple']
+```
+
+Enlazando con algunas lecciones anteriores, ahora se puede construir una función que tome todos sus argumentos y los introduzca en una matriz, así: 
+
+```javascript
+function arrayBuilder(one, two, three) {
+    var arr = [];
+    arr.push(one);
+    arr.push(two);
+    arr.push(three);
+    console.log(arr);
+}
+```
+
+Ahora puedo llamar a la función arrayBuilder(), por ejemplo, así:  
+
+```javascript
+arrayBuilder('apple', 'pear', 'plum'); // ['apple', 'pear', 'plum']
+```
+
+Aún mejor, no se tiene que registrar en la consola el array recién construido. En su lugar, se puede devolver de la siguiente manera:
+
+```javascript
+function arrayBuilder(one, two, three) {
+    var arr = [];
+    arr.push(one);
+    arr.push(two);
+    arr.push(three);
+    return arr;
+}
+```
+
+Además, se puede guardar esta llamada a la función en una variable. Asiminismo, se le puede colocar cualquier nombre, pero esta vez se le pondrá el nombre: simpleArr.
+
+```javascript
+var simpleArr = arrayBuilder('apple', 'pear', 'plum');
+```
+
+Y ahora se puede registrar en consola los valores almacenados en simpleArr: 
+
+```javascript
+console.log(simpleArr); // ['apple','pear','plum']
+```
+
+### Objetos numéricos
+
+JavaScript dispone de prácticos objetos incorporados. Uno de estos populares objetos incorporados es el objeto Math.
+
+#### Constantes numéricas
+
+Estas son algunas de las constantes numéricas incorporadas que existen en el objeto Math: 
+
+- **El número PI:** Math.PI que es aproximadamente 3,14159
+- **La constante de Euler:** Math.E que es aproximadamente 2.718
+- **El logaritmo natural de 2:** Math.LN2 que es aproximadamente 0.693
+
+#### Métodos de redondeo
+
+Estos incluyen: 
+
+- **Math.ceil():** redondea hacia arriba al entero más próximo 
+- **Math.floor():** redondea hacia abajo al entero más cercano 
+- **Math.round():** redondea hacia arriba al entero más cercano si el decimal es.5 o superior; en caso contrario, redondea hacia abajo al entero más cercano 
+- **Math.trunc():** recorta el decimal, dejando sólo el entero
+
+#### Métodos aritméticos y de cálculo
+
+He aquí una lista no exhaustiva de algunos métodos aritméticos y de cálculo comunes que existen en el objetoMath: 
+
+- **Math.pow(2,3):** calcula el número2 a la potencia de3, el resultado es8
+- **Math.sqrt(16):** calcula la raíz cuadrada de16, el resultado es4
+- **Math.cbrt(8):** halla la raíz cúbica de8, el resultado es2
+- **Math.abs(-10):** devuelve el valor absoluto , el resultado es10
+- **Métodos logarítmicos:** Math.log(), Math.log2(), Math.log10()
+- Devuelven los valores mínimo y máximo de todas las entradas: Math.min(9,8,7) devuelve 7, Math.max(9,8,7) devuelve 9.
+- **Métodos trigonométricos:** Math.sin(),Math.cos(),Math.tan(), etc.
+
+Ya indicados los Objetos Numéricos, ahora se abordaránn dos métodos útiles del objeto `Math` en JavaScript: `random` y `ceil`. Estos métodos proporcionan herramientas valiosas para generar números aleatorios y redondear valores decimales.
+
+Primero, se explora el método `random`, el cual genera un número decimal aleatorio en el rango de 0 a 0.99. Para utilizarlo, se sugiere asignar el resultado del método a una variable. A continuación, se muestra cómo ampliar el rango para obtener números mayores multiplicando el resultado por 10.
+
+```javascript
+// Utilizando el método random de Math
+var decimal = Math.random();
+console.log(decimal);
+
+// Ampliando el rango multiplicando por 10
+var ampliado = decimal * 10;
+console.log(ampliado);
+```
+
+![image](https://github.com/JMDS2810/PROGRAMACION_CON_JAVASCRIPT/assets/112999455/c3fdcf10-cec3-4c9e-b324-e977ee042425)
+
+Luego, se introduce el método `ceil`, que redondea un número decimal al entero más cercano. Se demuestra que este método siempre redondea hacia arriba y se ilustra con varios ejemplos.
+
+```javascript
+// Utilizando el método ceil de Math
+var rounded = Math.ceil(0.0001);
+console.log(rounded); // Salida: 1
+
+// Confirmación del comportamiento
+console.log(Math.ceil(0.5)); // Salida: 1
+console.log(Math.ceil(0.99)); // Salida: 1
+
+// Ejemplos con números más grandes
+console.log(Math.ceil(1.01)); // Salida: 2
+console.log(Math.ceil(1.5)); // Salida: 2
+console.log(Math.ceil(2.99)); // Salida: 3
+```
+
+![image](https://github.com/JMDS2810/PROGRAMACION_CON_JAVASCRIPT/assets/112999455/b117808a-7da1-4639-8358-e3acbbdbf587)
+
+Finalmente, se combina el método `random` con `ceil` para generar un entero aleatorio entre 0 y 10. Esto se logra multiplicando el resultado de `random` por 10 y redondeándolo hacia arriba.
+
+```javascript
+// Generando un entero aleatorio entre 0 y 10
+var decimal = Math.random() * 10;
+var rounded = Math.ceil(decimal);
+console.log(rounded);
+```
+
+![image](https://github.com/JMDS2810/PROGRAMACION_CON_JAVASCRIPT/assets/112999455/eb1a5f51-c1e4-45ed-a7b6-93d6e1cbd076)
+
+Este código devuelve un entero aleatorio entre 0 y 10 en la consola cada vez que se ejecuta.
+
+En este fragmento, se aborda el concepto de iterable en JavaScript y se explora la iteración sobre matrices y cadenas. Además, se presenta la manipulación de cadenas, haciendo hincapié en que, aunque las cadenas comparten algunas similitudes con las matrices, no son exactamente lo mismo.
+
+En JavaScript, un iterable se define como cualquier tipo de datos que puede ser recorrido utilizando algún tipo de bucle. Se destaca que tanto las matrices como las cadenas son ejemplos de datos sobre los cuales se puede iterar.
+
+En el ejemplo de las matrices, se utiliza una matriz llamada `veggies` que contiene nombres de verduras. Se muestra la longitud de la matriz y se accede a elementos individuales mediante índices. Luego, se utiliza un bucle for para recorrer y mostrar cada elemento de la matriz.
+
+```javascript
+var veggies = ['cebolla', 'perejil', 'zanahoria'];
+
+console.log(veggies.length); // Salida: 3
+console.log(veggies[0]); // Salida: cebolla
+console.log(veggies[1]); // Salida: perejil
+
+for (var i = 0; i < veggies.length; i++) {
+  console.log(veggies[i]);
+}
+```
+
+![image](https://github.com/JMDS2810/PROGRAMACION_CON_JAVASCRIPT/assets/112999455/b3155a1c-860e-4f7d-a9aa-ed913797f2d2)
+
+Se enfatiza que aunque las cadenas se comportan de manera similar a las matrices en la iteración, no son matrices en sí mismas. Se muestra un ejemplo de iteración sobre una cadena llamada `greeting` y se utiliza un bucle for para acceder a sus caracteres.
+
+```javascript
+var greeting = 'howdy';
+
+console.log(greeting.length); // Salida: 5
+console.log(greeting[0]); // Salida: h
+console.log(greeting[1]); // Salida: o
+
+for (var i = 0; i < greeting.length; i++) {
+  console.log(greeting[i]);
+}
+```
+
+![image](https://github.com/JMDS2810/PROGRAMACION_CON_JAVASCRIPT/assets/112999455/3fbccefc-c10f-482e-9308-1bb9f80c32a4)
+
+Luego, se demuestra que no se pueden utilizar todos los métodos de matriz en cadenas. Por ejemplo, intentar ejecutar el método `pop` en una cadena resulta en un error. Sin embargo, se presenta el uso del operador de concatenación (`+`) y el método `concat` para unir cadenas.
+
+```javascript
+var greet = 'hello';
+var user = 'Lisa';
+
+// Esto genera un error, ya que pop no es una función válida en cadenas
+// console.log(greet.pop());
+
+// Concatenación de cadenas con el operador +
+console.log(greet + user); // Salida: helloLisa
+
+// Uso del método concat para unir cadenas
+console.log(greet.concat(user)); // Salida: helloLisa
+```
+
+![image](https://github.com/JMDS2810/PROGRAMACION_CON_JAVASCRIPT/assets/112999455/5501d2c4-ec35-40aa-973c-0674e3b44601)
+
+### Typeof
+
+El operador `typeof` en JavaScript es utilizado para identificar el tipo de datos de un elemento. Acepta un parámetro y devuelve el nombre del tipo de datos representado como una cadena. Para un mejor entendimiento, se tiene el siguiente código:
+
+```javascript
+// Creación de varias instancias de la variable test
+var test1 = "Hola";         // Una cadena
+var test2 = 42;             // Un número entero
+var test3 = 3.14;           // Un número decimal
+var test4 = true;           // Un valor booleano verdadero
+var test5 = false;          // Un valor booleano falso
+var test6 = 1 < 2;          // Una comparación que evalúa a verdadero (true)
+var test7 = [1, 2, 3];      // Un array
+var test8 = function() {};  // Una función
+
+// Uso del método log de la consola para dar salida al valor de la variable test
+console.log(typeof test1);  // Salida: string
+console.log(typeof test2);  // Salida: number
+console.log(typeof test3);  // Salida: number
+console.log(typeof test4);  // Salida: boolean
+console.log(typeof test5);  // Salida: boolean
+console.log(typeof test6);  // Salida: boolean
+console.log(typeof test7);  // Salida: object (los arrays son objetos en JavaScript)
+console.log(typeof test8);  // Salida: function
+```
+
+![image](https://github.com/JMDS2810/PROGRAMACION_CON_JAVASCRIPT/assets/112999455/5d5f6e24-5e3f-411f-a6f4-1bd414f7b00d)
+
+Explicación:
+
+- Se crean instancias de la variable `test` con diferentes tipos de datos.
+- Se utiliza `typeof` junto con `console.log` para imprimir el tipo de cada variable.
+- Se observa que para arrays y funciones, el resultado es "object" y "function", respectivamente.
+
+El operador `typeof` es útil para verificar el tipo de datos de una variable antes de realizar operaciones específicas para ese tipo, y se puede utilizar para lidiar con situaciones donde se espera un tipo de datos particular.
+
+El texto menciona el uso de las sentencias `try`, `catch`, y `throw` en JavaScript para manejar errores y evitar que el programa se detenga abruptamente. A continuación, se proporcionan ejemplos de códigos en JavaScript que ilustran estos conceptos:
+
+1. **Ejemplo de uso de `try` y `catch`:**
+
+   ```javascript
+   try {
+     // Bloque de código que puede lanzar un error
+     console.log(a + b);
+   } catch (err) {
+     // Bloque catch que maneja el error
+     console.error("Hubo un error:", err);
+   } finally {
+     // Bloque opcional de código que se ejecuta siempre, ocurra o no un error
+     console.log("Mi programa no se detiene");
+   }
+   ```
+### Fallor y errores
+
+Un fallo hace que el código se comporte de manera inesperada pero siga ejecutándose, mientras que un error detiene la ejecución del código. Se puede poner de ejemplo a una función suma dos números y que genera el resultado, pero al pasar una cadena y un número, debido a la coerción de JavaScript, se produce una concatenación en lugar de una suma, y el programa sigue ejecutándose.
+
+Luego, se introduce un escenario donde se intenta usar variables (`c` y `d`) que no han sido declaradas ni asignadas, lo que lleva a un error de referencia. Este tipo de error ocurre cuando intentas usar un valor que no está definido en el código.
+
+Se destaca que JavaScript envía mensajes de error a la consola para informar sobre errores, lo que ayuda a identificar problemas en el código. Se tienen otros tipos de errores comunes, como errores de sintaxis y errores de tipo. Un error de sintaxis ocurre cuando se escribe un fragmento de código que JavaScript no puede leer, como olvidar un símbolo de comillas finales. Un error de tipo ocurre cuando intentas realizar una operación no válida en un tipo de dato, como ejecutar el método `pop` en un número.
+
+En resumen, la importancia radica en comprender los fallos y errores en JavaScript, además de identificar algunos errores comunes y destaca la utilidad de los mensajes de error de JavaScript para diagnosticar problemas en el código.
+
+#### Bloques de captura
+
+Se verá el uso de las sentencias `try`, `catch`, y `throw` en JavaScript para manejar errores y evitar que el programa se detenga abruptamente. A continuación, se proporcionan ejemplos de códigos en JavaScript que ilustran estos conceptos:
+
+1. **Ejemplo de uso de `try` y `catch`:**
+
+   ```javascript
+   try {
+     // Bloque de código que puede lanzar un error
+     console.log(a + b);
+   } catch (err) {
+     // Bloque catch que maneja el error
+     console.error("Hubo un error:", err);
+   } finally {
+     // Bloque opcional de código que se ejecuta siempre, ocurra o no un error
+     console.log("Mi programa no se detiene");
+   }
+   ```
+
+En este ejemplo, el bloque `try` contiene una operación (`console.log(a + b)`) que puede arrojar un error si las variables `a` y `b` no están definidas. Si ocurre un error, el bloque `catch` captura el error, lo almacena en una variable llamada `err` y ejecuta un bloque de código para manejar el error. El bloque `finally` es opcional y se ejecutará independientemente de si se lanzó un error o no.
+
+2. **Ejemplo de uso de `throw`:**
+
+   ```javascript
+   try {
+     // Bloque de código que puede lanzar un error
+     throw new Error("Hubo un error de referencia");
+   } catch (err) {
+     // Bloque catch que maneja el error
+     console.error("Error:", err.message);
+   } finally {
+     // Bloque opcional de código que se ejecuta siempre, ocurra o no un error
+     console.log("Mi programa no se detiene");
+   }
+   ```
+
+   En este ejemplo, el bloque `try` contiene la palabra clave `throw`, que se utiliza para lanzar manualmente un error. El bloque `catch` captura el error, lo almacena en una variable llamada `err` y maneja el error. El bloque `finally` es opcional y se ejecutará independientemente de si se lanzó un error o no.
+
+#### Errores de sintaxis, lógicos y de ejecución
+
+##### ReferenceError
+
+Un ReferenceError se lanza cuando, por ejemplo, se intenta utilizar variables que no han sido declaradas en ninguna parte.
+
+Un ejemplo puede ser intentar registrar en la consola una variable que no existe:
+
+```javascript
+console.log(username);
+```
+
+Si la variable llamada username no ha sido declarada, la línea de código anterior dará como resultado la siguiente salida:
+
+```javascript
+Uncaught ReferenceError: username is not defined
+```
+
+##### SyntaxError
+
+Cualquier tipo de código JavaScript no válido provocará un SyntaxError.
+
+Por ejemplo:
+
+``` javascript
+var a "there's no assignment operator here";
+```
+
+La línea de código anterior arrojará el siguiente error:  
+
+```javascript
+Uncaught SyntaxError: Unexpected string
+```
+
+Hay una advertencia interesante con respecto al SyntaxError en JavaScript: no se puede atrapar utilizando el bloque try-catch.  
+
+##### TypeError
+
+Un TypeError se lanza cuando, por ejemplo, se intenta ejecutar un método en un tipo de datos no soportado.
+
+Un ejemplo sencillo es intentar ejecutar el métodopop() sobre una cadena:
+
+``` javascript
+"hello".pop() // Uncaught TypeError: "hello".pop is not a function
+```
+
+El comportamiento tipo array de las cadenas ya se trató en una lección anterior de este curso. 
+
+Sin embargo, como se puede confirmar ejecutando la línea de código anterior, las cadenas no tienen todos los métodos de array a su disposición, e intentar utilizar algunos de esos métodos provocará que se lance un TypeError.  
+
+##### RangeError
+
+Un RangeError se lanza cuando estamos dando un valor a una función, pero ese valor está fuera del rango permitido de valores de entrada aceptables.
+
+He aquí un ejemplo sencillo de conversión de un número cotidiano de Base 10 (un número del sistema decimal común) a un número de Base 2 (es decir, un número binario).
+
+Por ejemplo
+
+```javascript
+(10).toString(2); // '1010'
+```
+
+El valor de 2 cuando se pasa al métodoto String(), es como decirle a JavaScript: "convierta el valor de10 del sistema numérico de Base 10, a su homólogo en el sistema numérico de Base 2".
+
+JavaScript obliga y "traduce" el número "normal" 10 a su contraparte binaria.
+
+Además de utilizar el sistema numérico de Base 2, también se puede utilizar el de Base 8, de esta forma:
+
+```javascript
+(10).toString(8); // 12
+```
+
+Obtengo de vuelta el valor 12, que es el número normal 10, escrito en el sistema numérico de Base 8.
+
+Sin embargo, si se intenta utilizar un sistema numérico inexistente, como un imaginario Base 100, ya que este sistema numérico efectivamente no existe en JavaScript, obtendré el RangeError, porque un sistema Base100 inexistente está fuera del rango de los sistemas numéricos que están disponibles para el método toString():
+
+```javascript
+(10).toString(100); // Uncaught RangeError: toString() radix argument must be between 2 and 36
+```
+
+#### Valores indefinidos, nulos y vacíos
+
+El texto menciona tres tipos de valores vacíos en JavaScript: `null`, `undefined`, y cadenas vacías. A continuación, se proporcionan ejemplos de códigos en JavaScript para ilustrar estos conceptos:
+
+1. **Ejemplo de `null`:**
+
+   ```javascript
+   // Ejemplo de uso de null
+   let letters = "abc";
+   
+   // Buscar la letra 'a' en la cadena
+   let resultA = letters.match(/a/);
+   console.log(resultA); // Devuelve una matriz con información sobre la coincidencia
+   
+   // Buscar la letra 'd' en la cadena
+   let resultD = letters.match(/d/);
+   console.log(resultD); // Devuelve null, indicando que no se encontró la letra 'd'
+   ```
+
+   En este ejemplo, la función `match` busca la presencia de ciertas letras en la variable `letters`. Cuando no encuentra la letra 'd', devuelve `null` para indicar la ausencia de un objeto.
+
+2. **Ejemplo de `undefined`:**
+
+   ```javascript
+   // Ejemplo de uso de undefined
+   let name;
+   
+   // Intentar imprimir el valor de una variable no asignada
+   console.log(name); // Devuelve undefined, ya que la variable existe pero no tiene valor asignado
+   
+   // Asignar un valor a la variable después de su declaración
+   name = "John";
+   console.log(name); // Imprime "John"
+   ```
+
+   En este ejemplo, la variable `name` se declara pero no se le asigna un valor inicial, por lo que su valor es `undefined`. Después, se le asigna el valor "John".
+
+3. **Ejemplo de cadena vacía:**
+
+   ```javascript
+   // Ejemplo de uso de cadena vacía
+   let emptyString1 = '';
+   let emptyString2 = "";
+   
+   console.log(emptyString1); // Imprime una cadena vacía
+   console.log(emptyString2); // Imprime una cadena vacía
+   ```
+
+   En este ejemplo, se crean dos variables, `emptyString1` y `emptyString2`, que contienen cadenas vacías. Ambas variables se imprimen y muestran como cadenas vacías.
 
