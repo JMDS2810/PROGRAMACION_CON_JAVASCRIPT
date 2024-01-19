@@ -722,6 +722,112 @@ function factorial(n) {
 console.log(factorial(5)); // 120
 ```
 
+### Objetos en JavaScript
+En JavaScript, los objetos son estructuras de datos que permiten almacenar y organizar información de manera más compleja que las variables simples. Los objetos son fundamentales en la programación orientada a objetos, y ofrecen una forma de agrupar datos y funciones relacionadas en una única entidad.
+
+Un objeto en JavaScript puede contener propiedades y métodos. Las propiedades son pares clave-valor que almacenan datos, mientras que los métodos son funciones asociadas al objeto. Estos elementos permiten modelar entidades del mundo real de manera más cercana, ya que puedes representar características y comportamientos específicos.
+
+La notación de objetos en JavaScript es bastante flexible. Puedes crear objetos de forma literal utilizando llaves `{}`, y luego definir las propiedades y métodos dentro de esas llaves. Además, puedes acceder a las propiedades y métodos de un objeto utilizando la notación de puntos (`objeto.propiedad`) o la notación de corchetes (`objeto['propiedad']`).
+
+Los objetos en JavaScript ofrecen una manera poderosa de estructurar y organizar código, facilitando la creación de programas más modulares y mantenibles. Al comprender cómo trabajar con objetos, los programadores pueden construir aplicaciones más eficientes y expresivas.
+
+#### Literales de objeto y la notación de puntos
+
+Como bien se mencioncó, una de las formas más comunes de construir un objeto en JavaScript es utilizando la sintaxis de literal de objeto: {}.
+
+Para poder acceder a este literal de objeto, es muy común asignarlo a una variable, como:
+
+```javascript
+var user = {}; //create an object
+```
+
+Ahora se asigna un literal de objeto a la variable user, lo que significa que el objeto al que está ligado puede ampliarse y manipularse de infinidad de formas.
+
+A veces, se puede construir inmediatamente un objeto completo, utilizando la sintaxis del literal de objeto, especificando las propiedades del objeto, delimitadas como pares clave-valor, utilizando la sintaxis que ya se trató en un punto anterior de esta lección.
+
+He aquí uno de esos objetos construidos previamente:
+
+```javascript
+//creating an object with properties and their values
+var assistantManager = {
+    rangeTilesPerTurn: 3,
+    socialSkills: 30,
+    streetSmarts: 30,
+    health: 40,
+    specialAbility: "young and ambitious",
+    greeting: "Let's make some money"
+}
+```
+
+Esta sintaxis consta esencialmente de dos pasos: 
+
+1. Declarar una nueva variable y asignarle un literal de objeto - en otras palabras, esto:var assistantManager = {}
+
+2. Asignar los valores a cada una de las claves del objeto, utilizando el operador de asignación, =
+
+Observe que es muy fácil construir cualquier tipo de objeto en JavaScript utilizando esta sintaxis de ejemplo.
+
+Por ejemplo, aquí tiene un objeto table:
+
+```javascript
+var table = {
+    legs: 3,
+    color: "brown",
+    priceUSD: 100,
+}
+```
+
+Para acceder al objeto table, puedo simplemente registrar por consola el objeto completo:  
+
+```javascript
+console.log(table);//display the object in the developer console 
+```
+
+El valor devuelto es el objetotable completo:  
+
+```javascript
+{legs: 3, color: 'brown', priceUSD: 100}
+```
+
+Además, puedo registrar por consola cualquier propiedad individual, así:  
+
+```javascript
+console.log(table.color); // 'brown'
+```
+
+Ahora que tengo esta "receta sintáctica", puedo construir cualquier otro objeto de forma similar: 
+
+```javascript
+var house = {
+    rooms: 3,
+    color: "brown",
+    priceUSD: 10000,
+}
+```
+
+Un enfoque alternativo de la construcción de objetos es guardar primero un literal de objeto vacío en una variable, luego utilizar la notación de puntos para declarar nuevas propiedades sobre la marcha, y utilizar el operador de asignación para añadir valores a esas propiedades; por ejemplo:
+
+```javascript
+var house2 = {};
+house2.rooms = 4;
+house2.color = "pink";
+house2.priceUSD = 12345;
+```
+
+Además, nada me impide combinar ambos enfoques. Por ejemplo:  
+
+```javascript
+console.log(house); // {rooms: 3, color: "brown", priceUSD: 10000}
+house.windows = 10;
+console.log(house); // {rooms: 3, color: "brown", priceUSD: 10000, windows: 10}
+```
+
+Esta flexibilidad significa además que puedo actualizar propiedades ya existentes, no sólo añadir nuevas:  
+
+```javascript
+house.windows = 11;
+console.log(house); // {rooms: 3, color: "brown", priceUSD: 10000, windows: 11}
+```
 
 
 
