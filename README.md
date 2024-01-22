@@ -1909,7 +1909,7 @@ El código crea dos objetos en JavaScript: un objeto básico llamado `car` y un 
    ```
    Se utiliza un bucle `for...of` para iterar sobre las propiedades del objeto `sportsCar`. Se utiliza `Object.keys(sportsCar)` para obtener solo las propiedades propias y, por lo tanto, evita iterar sobre las propiedades del prototipo. La salida incluirá solo las propiedades propias del objeto `sportsCar`.
 
-**Salida Esperada:**
+**Salida esperada:**
 ```
 The sportsCar Object:  { speed: 'fast' }
 ----- for-in is unreliable -----
@@ -1925,3 +1925,179 @@ speed:fast
 ![image](https://github.com/JMDS2810/PROGRAMACION_CON_JAVASCRIPT/assets/112999455/0e8f4508-90a4-4b5d-9b53-775076fff8d3)
 
 En resumen, el código destaca la diferencia entre `for...in` y `for...of` al iterar sobre las propiedades de un objeto y cómo `for...of` puede utilizarse para iterar de manera confiable solo sobre las propiedades propias del objeto.
+
+#### Literales de plantilla 
+
+Los literales de plantilla en JavaScript ES6, son una poderosa característica que mejora la manipulación y creación de cadenas en comparación con el método convencional en ES5. Para empezar, se tiene una comparación básica de cómo se construyen las cadenas en JavaScript ES5 utilizando comillas simples o dobles. A continuación, se muestra un ejemplo con una variable `noMultiLine` y se imprime en la consola con `console.log`:
+
+```javascript
+let noMultiLine = "did you know, no multiline strings in ES5";
+console.log(noMultiLine);
+```
+
+![image](https://github.com/JMDS2810/PROGRAMACION_CON_JAVASCRIPT/assets/112999455/e757a7ea-05db-4529-b19e-272c6f5940c5)
+
+Aquí, se destaca la limitación al intentar dividir una cadena en varias líneas en ES5, lo que provoca un error. Ahora, introduzcamos los literales de plantilla en ES6 para abordar esta restricción y proporcionar una solución más flexible. Se muestra la variable `multiLine` con una cadena distribuida en varias líneas encerrada por comillas inversas (`):
+
+```javascript
+let multiLine = `multiline
+string
+using template literals`;
+
+console.log(multiLine);
+```
+
+![image](https://github.com/JMDS2810/PROGRAMACION_CON_JAVASCRIPT/assets/112999455/8cf2f28a-cf70-4d63-8faf-0aadafd7e8e9)
+
+Este enfoque demuestra la flexibilidad de los literales de plantilla al permitir la creación de cadenas multilínea sin preocuparse por errores de formato. Además, los literales de plantilla facilitan la interpolación de variables dentro de las cadenas. Creemos variables `first` y `second`, luego usemos la interpolación de variables dentro de una cadena más amplia:
+
+```javascript
+let first = "Hello";
+let second = "World";
+
+let interpolatedString = `${first}: ${second}`;
+console.log(interpolatedString);
+```
+
+![image](https://github.com/JMDS2810/PROGRAMACION_CON_JAVASCRIPT/assets/112999455/227ff0b5-cab8-4dc7-9628-b382f778d916)
+
+Aquí, se observa cómo las comillas dentro de las variables no generan conflictos al usar literales de plantilla. Este enfoque simplifica la concatenación y mejora la legibilidad del código. En resumen, los literales de plantilla en JavaScript ES6 ofrecen una sintaxis más poderosa y versátil para trabajar con cadenas, permitiendo la creación de cadenas multilínea e interpolación de variables de manera más eficiente.
+
+#### Estructura de datos
+
+Se conocen diversas estructuras de datos comunes en JavaScript, como objetos, matrices, mapas y conjuntos, y se destaca que la elección de la estructura de datos influye en cómo se codifica la solución.
+
+Las estructuras de datos se presentan como una forma de organizar la información. Se ejemplifica que representar los datos como cadenas podría resultar poco eficiente, ya que sería necesario extraer los números para realizar cálculos. En cambio, almacenar las calificaciones en una matriz se propone como una opción más eficiente, agrupando datos relacionados bajo una única etiqueta. Por ejemplo:
+
+```javascript
+const gradesArray = [90, 85, 78, 92, 88];
+```
+
+Se introduce la idea de que JavaScript tiene ciertas limitaciones en comparación con otros lenguajes, pero se destacan las estructuras más comunes:
+
+1. **Objetos:** Colección inalterable de pares clave-valor, útil en situaciones donde se necesitan asociaciones de clave-valor. Por ejemplo, en programación orientada a objetos. Ejemplo:
+
+```javascript
+const student = {
+  name: "John Doe",
+  grade: 95,
+  subject: "Math",
+};
+```
+
+2. **Arrays:** Colección iterable ordenada de valores, donde se accede a los valores mediante índices. Un bucle, como el bucle for, es una herramienta común para acceder y manipular datos en un array. Ejemplo:
+
+```javascript
+for (let i = 0; i < gradesArray.length; i++) {
+  console.log("Grade:", gradesArray[i]);
+}
+```
+
+3. **Mapas:** Similar a una matriz, pero consta de pares clave-valor, y permite cualquier tipo de valor como clave. A diferencia de los objetos, que limitan las claves a cadenas o símbolos. Ejemplo:
+
+```javascript
+const gradeMap = new Map();
+gradeMap.set("Math", 90);
+gradeMap.set("English", 85);
+```
+
+4. **Conjuntos:** Colección donde cada elemento debe ser único. Al intentar agregar un elemento no único, la operación no se ejecutará, sin lanzar errores ni realizar actualizaciones. Ejemplo:
+
+```javascript
+const uniqueGrades = new Set([90, 85, 78, 92, 88]);
+uniqueGrades.add(92); // No se realiza la adición, ya que 92 ya está en el conjunto
+```
+
+#### Operadores de dispersión
+
+El operador de propagación, es una característica introducida en la actualización ES6 de JavaScript, que se presenta como una herramienta versátil para copiar propiedades de objetos y concatenar elementos de matrices. Se destaca que este operador se representa mediante tres puntos.
+
+Como ejemplo inicial, se crea una matriz llamada "top3" que contiene los tres mejores lugares para visitar en Roma: el Coliseo, la Fontana de Trevi y la Ciudad del Vaticano. Luego, se construye una función llamada "showItinerary" que enumera estos lugares utilizando tres argumentos. La función se invoca con los elementos de la matriz "top3", lo que requiere escribir cada elemento individualmente.
+
+```javascript
+// Creación de una matriz "top3" con los mejores lugares para visitar en Roma
+let top3 = ["Coliseo", "Fontana de Trevi", "Ciudad del Vaticano"];
+
+// Función que enumera los lugares utilizando argumentos
+function showItinerary(lugar1, lugar2, lugar3) {
+    console.log(`Visita ${lugar1}, luego visita ${lugar2} y termina con una visita a ${lugar3}.`);
+}
+
+// Invocación de la función utilizando elementos de la matriz "top3" sin el operador de propagación
+showItinerary(top3[0], top3[1], top3[2]);
+
+// Creación de una nueva matriz "top7" con siete destinos
+let top7 = ["Destino1", "Destino2", "Destino3", "Destino4", "Destino5", "Destino6", "Destino7"];
+
+// Invocación de la función utilizando elementos de la matriz "top7" con el operador de propagación
+showItinerary(...top7);
+
+// Utilizando el operador de propagación con la matriz "top3"
+showItinerary(...top3);
+```
+
+![image](https://github.com/JMDS2810/PROGRAMACION_CON_JAVASCRIPT/assets/112999455/0e78fd62-eda9-4f9b-9c97-6bb5d44a07f1)
+
+Luego, se plantea la pregunta sobre cómo manejar una función que debe mostrar siete lugares, lo que resultaría en una sintaxis poco práctica y repetitiva al pasar los argumentos. Se crea una nueva matriz llamada "top7" con siete destinos, y se muestra cómo invocar la función "showItinerary" con todos los elementos de esta matriz utilizando el método tradicional.
+
+A continuación, se introduce el operador de propagación como una solución más eficiente y concisa. Se muestra cómo usar el operador de propagación en la función "showItinerary" al pasar la matriz "top7", simplificando significativamente la sintaxis. Esto elimina la necesidad de enumerar cada miembro individualmente.
+
+Finalmente, se demuestra que el operador de propagación también se puede aplicar a la matriz más corta "top3", resaltando su versatilidad y facilidad de uso. En resumen, el video explora el concepto y la aplicación práctica del operador de propagación en JavaScript.
+
+#### Operador de Rest en JavaScript
+
+El operador de rest (`...`) en JavaScript es una característica introducida en ES6 (ECMAScript 2015). Se utiliza principalmente para trabajar con un número variable de elementos en funciones o al desestructurar arreglos. A continuación, se explica su uso en el contexto del código proporcionado:
+
+**Desestructuración con Operador de Rest:**
+```javascript
+const [first, second, third, ...secondVisit] = top7;
+```
+En este ejemplo, el operador de rest se utiliza en la desestructuración de un arreglo (`top7`). Las primeras tres atracciones se asignan a las variables `first`, `second` y `third`, respectivamente. El operador de rest (`...secondVisit`) recoge el resto de los elementos en un nuevo arreglo llamado `secondVisit`. Esto proporciona una forma concisa de dividir una matriz en partes conocidas y el resto.
+
+**Operador de Rest en Funciones:**
+```javascript
+function addTaxToPrices(taxRate, ...items) {
+    const itemsWithTax = items.map(item => `${item} - Taxed at ${taxRate}%`);
+    return itemsWithTax;
+}
+
+const taxedItems = addTaxToPrices(10, "Item1", "Item2", "Item3", "Item4");
+```
+En este caso, el operador de rest se utiliza en la definición de la función `addTaxToPrices`. Permite que la función acepte un número variable de parámetros después del primer parámetro (`taxRate`). Los elementos adicionales se agrupan en un arreglo llamado `items`. La función luego aplica un impuesto a cada artículo utilizando el método `map`.
+
+**Teoría del Operador de Rest:**
+- El operador de rest se utiliza para manejar situaciones en las que el número de elementos es variable o desconocido.
+- Debe ser el último parámetro en la lista de parámetros de una función.
+- Al desestructurar arreglos, el operador de rest recoge el resto de los elementos en una nueva variable.
+- Facilita trabajar con un número variable de elementos, mejorando la flexibilidad y legibilidad del código.
+  
+Para un mejor entendimiento, se tomará de ejemplo el código anteriormente visto.
+
+```javascript
+// Creación de una matriz "top7" con siete lugares para visitar en Roma
+const top7 = ["Coliseo", "Foro Romano", "Vaticano", "Fontana de Trevi", "Panteón", "Plaza Venecia", "Colina Palatina"];
+
+// Uso del operador rest para desestructurar la matriz y obtener las primeras tres atracciones y el resto
+const [first, second, third, ...secondVisit] = top7;
+
+// Inspección de las variables obtenidas
+console.log("First Attraction:", first);
+console.log("Second Attraction:", second);
+console.log("Third Attraction:", third);
+console.log("Second Visit Attractions:", secondVisit);
+
+// Definición de la función "addTaxToPrices" con el operador rest para recibir una lista de artículos
+function addTaxToPrices(taxRate, ...items) {
+    // Aplicación del tipo impositivo a cada artículo utilizando el método "map"
+    const itemsWithTax = items.map(item => `${item} - Taxed at ${taxRate}%`);
+    return itemsWithTax;
+}
+
+// Ejemplo de uso de la función "addTaxToPrices" con el operador rest
+const taxedItems = addTaxToPrices(10, "Item1", "Item2", "Item3", "Item4");
+
+// Mostrar los artículos con el tipo impositivo
+console.log("Taxed Items:", taxedItems);
+```
+
+En este código, se utiliza el operador rest para desestructurar la matriz "top7" y obtener las primeras tres atracciones en variables individuales (`first`, `second`, `third`) y el resto de las atracciones en una nueva matriz llamada `secondVisit`. Además, se muestra un ejemplo de cómo el operador rest se puede utilizar en una función, en este caso, para crear una función `addTaxToPrices` que aplica un tipo impositivo a una lista de artículos utilizando el operador rest para recibir una cantidad variable de parámetros.
