@@ -1444,3 +1444,327 @@ console.log(userConst); // Salida: undefined
 ![image](https://github.com/JMDS2810/PROGRAMACION_CON_JAVASCRIPT/assets/112999455/8e712d31-4f74-41d4-b7da-e0a77d04a910)
 
 Se aconseja elegir `let` o `const` en función de si se reasignarán o no los valores, indicando que `var` es más indulgente, mientras que `const` es más estricta.
+
+### Programación Orientada a Objetos (POO):
+
+**Programación Orientada a Objetos (POO) - JavaScript:**
+
+En programación, existen paradigmas que representan estilos o formas de escribir código. Uno de estos paradigmas es la Programación Orientada a Objetos (POO), que organiza programas mediante objetos que agrupan datos y funcionalidades. A continuación se tiene un ejemplo práctico para poder explorar cómo funciona esto, utilizando un ejemplo de cálculo del costo total de comprar un par de zapatos.
+
+1. **Definición del Objeto `purchase1`:**
+   ```javascript
+   let purchase1 = {
+     shoesPrice: 100,
+     taxRate: 1.2,
+     totalPrice: function () {
+       return this.shoesPrice * this.taxRate;
+     },
+   };
+   ```
+
+   En este código, creamos un objeto `purchase1` que tiene propiedades como `shoesPrice` y `taxRate`. Además, tiene un método `totalPrice` que calcula el costo total multiplicando el precio de los zapatos por el impuesto.
+
+2. **Acceso y Uso del Método `totalPrice`:**
+   ```javascript
+   console.log(purchase1.totalPrice()); // Output: 120
+   ```
+
+   Aquí accedemos al método `totalPrice` del objeto `purchase1` para obtener el resultado del cálculo, que es 120.
+
+3. **Uso de la Palabra Clave `this` para Reutilización:**
+   ```javascript
+   let purchase2 = {
+     shoesPrice: 50,
+     taxRate: 1.2,
+     totalPrice: purchase1.totalPrice,
+   };
+
+   console.log(purchase2.totalPrice()); // Output: 60
+   ```
+   
+![image](https://github.com/JMDS2810/PROGRAMACION_CON_JAVASCRIPT/assets/112999455/7421139f-d8fb-4670-a8fc-5f320ad85b7c)
+
+   En este fragmento, creamos otro objeto `purchase2`, y al asignarle el método `totalPrice` de `purchase1`, estamos reutilizando el mismo método. La palabra clave `this` se utiliza para referirse al objeto actual, permitiendo la reutilización eficiente del código.
+
+**Programación Funcional - JavaScript:**
+
+En contraste con POO, la Programación Funcional mantiene separados los datos de las funciones. Veamos cómo realizar el mismo cálculo utilizando un enfoque funcional.
+
+```javascript
+// Programación Funcional para el cálculo del costo total
+function calculateTotalPrice(shoesPrice, taxRate) {
+  return shoesPrice * taxRate;
+}
+
+let shoesPrice = 100;
+let taxRate = 1.2;
+let totalPrice = calculateTotalPrice(shoesPrice, taxRate);
+
+console.log(totalPrice); // Output: 120
+```
+
+![image](https://github.com/JMDS2810/PROGRAMACION_CON_JAVASCRIPT/assets/112999455/95af9e55-e279-45c4-9be4-b1a8aadf915b)
+
+En este ejemplo, creamos una función `calculateTotalPrice` que toma los valores de `shoesPrice` y `taxRate` como argumentos y devuelve el resultado del cálculo. Luego, llamamos a esta función con valores específicos para obtener el mismo resultado, que es 120.
+
+**Programación Orientada a Objetos (OOP) - Clases en JavaScript:**
+
+En programación, cuando necesitas construir múltiples objetos con un conjunto específico de propiedades y métodos, las clases son una herramienta eficiente. En JavaScript, las clases se definen con la palabra clave `class`, seguida del nombre de la clase con mayúscula y un bloque de código. Aquí se utiliza una función constructora dentro de la clase para asignar parámetros a las propiedades de los objetos que se crearán a partir de la clase. Además, se pueden agregar métodos a la clase sin utilizar la palabra clave `function`, solo especificando el nombre del método.
+
+**Ejemplo de Clase en JavaScript:**
+```javascript
+class Car {
+  constructor(make, model, year) {
+    this.make = make;
+    this.model = model;
+    this.year = year;
+    this.turbo = false;
+  }
+
+  turboOn() {
+    this.turbo = true;
+    console.log("Turbo activated!");
+  }
+}
+
+// Instanciación de la clase Car
+let carOne = new Car("Toyota", "Camry", 2022);
+
+// Acceso a métodos y propiedades
+carOne.turboOn(); // Activación del turbo
+console.log(carOne.make); // Salida: Toyota
+```
+
+![image](https://github.com/JMDS2810/PROGRAMACION_CON_JAVASCRIPT/assets/112999455/4866349f-adea-451a-aa5d-9fe5f58a8715)
+
+En este ejemplo, se crea la clase `Car` con un constructor que inicializa propiedades como `make`, `model`, `year`, y una propiedad adicional `turbo` que se establece en `false`. Se agrega un método `turboOn` para activar el turbo y se instancia la clase creando un objeto `carOne`. Los métodos y propiedades de la clase se acceden a través de este objeto.
+
+**Principios fundamentales de la Programación Orientada a Objetos (POO)**
+
+La Programación Orientada a Objetos (POO) es un paradigma que se basa en cuatro principios fundamentales: herencia, encapsulación, abstracción y polimorfismo. Estos principios proporcionan un marco sólido para el diseño de software, mejorando la modularidad, la reutilización de código y la organización de sistemas complejos.
+
+**Principios Fundamentales de la Programación Orientada a Objetos (POO) en JavaScript:**
+
+1. **Herencia:**
+   La herencia en JavaScript se logra mediante la palabra clave `extends`. Una clase hija hereda propiedades y métodos de la clase padre.
+
+   **Ejemplo en JavaScript:**
+   ```javascript
+   class Animal {
+       constructor(name) {
+           this.name = name;
+       }
+
+       speak() {
+           console.log(`${this.name} makes a sound`);
+       }
+   }
+
+   class Dog extends Animal {
+       speak() {
+           console.log(`${this.name} barks`);
+       }
+   }
+
+   const myDog = new Dog('Buddy');
+   myDog.speak();  // Salida: "Buddy barks"
+   ```
+   
+![image](https://github.com/JMDS2810/PROGRAMACION_CON_JAVASCRIPT/assets/112999455/e8f2686e-fcc4-48d1-95f9-d02729daf65e)
+
+2. **Encapsulación:**
+   JavaScript no tiene modificadores de acceso, pero se puede lograr cierto nivel de encapsulación utilizando funciones de cierre (closures).
+
+   **Ejemplo en JavaScript:**
+   ```javascript
+   function BankAccount() {
+       let balance = 0;
+
+       return {
+           deposit: function(amount) {
+               balance += amount;
+           },
+           getBalance: function() {
+               return balance;
+           }
+       };
+   }
+
+   const myAccount = BankAccount();
+   myAccount.deposit(100);
+   console.log(myAccount.getBalance());  // Salida: 100
+   ```
+
+![image](https://github.com/JMDS2810/PROGRAMACION_CON_JAVASCRIPT/assets/112999455/b65c8d4b-6ba9-4b02-b7b1-bfc2319e29f9)
+
+3. **Abstracción:**
+   En JavaScript, la abstracción se logra al definir clases e interfaces que representan conceptos generales.
+
+   **Ejemplo en JavaScript:**
+   ```javascript
+   // Abstracción a través de una interfaz
+   class Shape {
+       area() {
+           throw new Error("Método 'area' debe ser implementado");
+       }
+   }
+
+   class Circle extends Shape {
+       constructor(radius) {
+           super();
+           this.radius = radius;
+       }
+
+       area() {
+           return Math.PI * this.radius ** 2;
+       }
+   }
+
+   const myCircle = new Circle(5);
+   console.log(myCircle.area());  // Salida: 78.54
+   ```
+
+![image](https://github.com/JMDS2810/PROGRAMACION_CON_JAVASCRIPT/assets/112999455/ef9bb5d0-d961-418b-b53e-5e39108b06c6)
+
+4. **Polimorfismo:**
+   En JavaScript, el polimorfismo se logra a través de la capacidad de los objetos de responder a métodos de manera dinámica.
+
+   **Ejemplo en JavaScript:**
+   ```javascript
+   class Animal {
+       sound() {
+           console.log("Animal makes a sound");
+       }
+   }
+
+   class Dog extends Animal {
+       sound() {
+           console.log("Dog barks");
+       }
+   }
+
+   const myAnimal = new Dog();
+   myAnimal.sound();  // Salida: "Dog barks"
+   ```
+
+![image](https://github.com/JMDS2810/PROGRAMACION_CON_JAVASCRIPT/assets/112999455/c4f46734-0b4b-4de5-8bb0-f5008d14459a)
+
+   Aquí, el mismo método `sound()` produce resultados diferentes según el objeto con el que se llama.
+
+**Constructores en JavaScript:**
+
+Los constructores en JavaScript son funciones especiales utilizadas para crear e inicializar objetos. Estos se invocan usando la palabra clave `new` y son útiles para crear múltiples instancias de un objeto con propiedades y métodos específicos. Aquí hay una explicación detallada junto con ejemplos de código:
+
+En la programación orientada a objetos (POO) de JavaScript, los constructores son funciones especiales que se utilizan para crear e inicializar objetos. Estas funciones actúan como plantillas para la creación de instancias de objetos y suelen comenzar con una letra mayúscula por convención. Vamos a definir los constructores y proporcionar ejemplos de código para ilustrar su uso:
+
+**Ejemplos de Código:**
+
+1. **Constructor Básico:**
+   
+```javascript
+// Definir un constructor
+function Persona(nombre, edad) {
+    this.nombre = nombre;
+    this.edad = edad;
+}
+
+// Crear una instancia utilizando el constructor
+const persona1 = new Persona('Juan', 30);
+
+// Acceder a las propiedades del objeto
+console.log(persona1.nombre);  // Salida: "Juan"
+console.log(persona1.edad);    // Salida: 30
+```
+
+![image](https://github.com/JMDS2810/PROGRAMACION_CON_JAVASCRIPT/assets/112999455/33424864-6c12-40ac-9c7b-ac1d1137b79c)
+
+2. **Métodos en el Constructor:**
+
+```javascript
+function Coche(marca, modelo) {
+    this.marca = marca;
+    this.modelo = modelo;
+
+    this.mostrarDetalles = function() {
+        console.log(`Marca: ${this.marca}, Modelo: ${this.modelo}`);
+    };
+}
+
+const coche1 = new Coche('Toyota', 'Corolla');
+coche1.mostrarDetalles();  // Salida: "Marca: Toyota, Modelo: Corolla"
+```
+
+![image](https://github.com/JMDS2810/PROGRAMACION_CON_JAVASCRIPT/assets/112999455/e7d17b5f-25cf-4b8d-bd7f-9876ee49693e)
+
+3. **Uso de Prototipos:**
+   
+```javascript
+function Libro(titulo, autor) {
+    this.titulo = titulo;
+    this.autor = autor;
+}
+
+// Agregar un método utilizando el prototipo
+Libro.prototype.mostrarInfo = function() {
+    console.log(`${this.titulo} por ${this.autor}`);
+};
+
+const libro1 = new Libro('Harry Potter', 'J.K. Rowling');
+libro1.mostrarInfo();  // Salida: "Harry Potter por J.K. Rowling"
+```
+
+![image](https://github.com/JMDS2810/PROGRAMACION_CON_JAVASCRIPT/assets/112999455/e4d3c285-88e2-4670-b783-d1538f31cff9)
+
+4. **Uso de Clases (ES6 y posteriores):**
+
+```javascript
+class Pelicula {
+    constructor(titulo, director) {
+        this.titulo = titulo;
+        this.director = director;
+    }
+
+    reproducir() {
+        console.log(`Reproduciendo: ${this.titulo} dirigida por ${this.director}`);
+    }
+}
+
+const pelicula1 = new Pelicula('Inception', 'Christopher Nolan');
+pelicula1.reproducir();  // Salida: "Reproduciendo: Inception dirigida por Christopher Nolan"
+```
+
+![image](https://github.com/JMDS2810/PROGRAMACION_CON_JAVASCRIPT/assets/112999455/e237432a-03ad-4a22-a3b0-4e17d8332676)
+
+Estos ejemplos muestran diferentes formas de utilizar constructores en JavaScript para crear objetos con propiedades y métodos específicos. Los constructores son fundamentales en la programación orientada a objetos, ya que permiten la creación de instancias de objetos con una estructura predefinida.
+
+**Herencia**
+
+Para entender este principio, se define al prototipo, el cual es un objeto que puede contener propiedades compartidas por varios otros objetos, y este principio forma la base de la herencia en JavaScript.
+
+A continuación, se presenta un ejemplo de código que demuestra la creación de objetos utilizando un prototipo. Se define un objeto "pájaro" con propiedades como "tiene alas", "puede volar" y "tiene plumas". A través de la función `Object.create`, se crean instancias como "águila1" y "pingüino1" con el prototipo del objeto "pájaro".
+
+Se enfatiza la capacidad de los objetos instanciados de acceder a las propiedades del prototipo. Se muestra cómo anular propiedades específicas en un objeto concreto sin afectar a otros objetos que comparten el mismo prototipo.
+
+Finalmente, se sugiere que, aunque es posible crear herencia con el método de creación de objetos, en casos más complejos, la sintaxis de clase es preferible. Esta sintaxis de clase sigue operando con prototipos, pero mejora la experiencia del desarrollador en situaciones más elaboradas.
+
+```javascript
+// Definición del objeto pájaro como prototipo
+const bird = {
+    hasWings: true,
+    canFly: true,
+    hasFeathers: true,
+};
+
+// Creación de objetos instanciados con el prototipo
+const eagle1 = Object.create(bird);
+console.log("Eagle1 has wings:", eagle1.hasWings); // Salida: true
+
+const penguin1 = Object.create(bird);
+penguin1.canFly = false;
+console.log("Penguin1 can fly:", penguin1.canFly); // Salida: false
+console.log("Penguin1 has feathers:", penguin1.hasFeathers); // Salida: true
+```
+
+![image](https://github.com/JMDS2810/PROGRAMACION_CON_JAVASCRIPT/assets/112999455/7a26382c-3a37-4ba9-b52c-dbbf96c1f6b0)
+
+Este código refleja la creación de objetos ("águila1" y "pingüino1") utilizando un prototipo común ("pájaro"). Se destaca la capacidad de anular la propiedad `canFly` en el objeto "pingüino1" sin afectar al prototipo o a otros objetos.
