@@ -2100,4 +2100,6 @@ const taxedItems = addTaxToPrices(10, "Item1", "Item2", "Item3", "Item4");
 console.log("Taxed Items:", taxedItems);
 ```
 
+![image](https://github.com/JMDS2810/PROGRAMACION_CON_JAVASCRIPT/assets/112999455/06bfb23f-6b86-4125-9723-3216aa1496a2)
+
 En este código, se utiliza el operador rest para desestructurar la matriz "top7" y obtener las primeras tres atracciones en variables individuales (`first`, `second`, `third`) y el resto de las atracciones en una nueva matriz llamada `secondVisit`. Además, se muestra un ejemplo de cómo el operador rest se puede utilizar en una función, en este caso, para crear una función `addTaxToPrices` que aplica un tipo impositivo a una lista de artículos utilizando el operador rest para recibir una cantidad variable de parámetros.
