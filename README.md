@@ -1,4 +1,4 @@
-# Programación con JavaScript
+![image](https://github.com/JMDS2810/PROGRAMACION_CON_JAVASCRIPT/assets/112999455/c30fc8ca-03ae-4a46-9a79-3c8eab8214f6)# Programación con JavaScript
 
 ## Introducción
 
@@ -1445,9 +1445,9 @@ console.log(userConst); // Salida: undefined
 
 Se aconseja elegir `let` o `const` en función de si se reasignarán o no los valores, indicando que `var` es más indulgente, mientras que `const` es más estricta.
 
-### Programación Orientada a Objetos (POO):
+### Programación Orientada a Objetos (POO)
 
-**Programación Orientada a Objetos (POO) - JavaScript:**
+#### Programación Orientada a Objetos (POO) - JavaScript
 
 En programación, existen paradigmas que representan estilos o formas de escribir código. Uno de estos paradigmas es la Programación Orientada a Objetos (POO), que organiza programas mediante objetos que agrupan datos y funcionalidades. A continuación se tiene un ejemplo práctico para poder explorar cómo funciona esto, utilizando un ejemplo de cálculo del costo total de comprar un par de zapatos.
 
@@ -1486,7 +1486,7 @@ En programación, existen paradigmas que representan estilos o formas de escribi
 
    En este fragmento, creamos otro objeto `purchase2`, y al asignarle el método `totalPrice` de `purchase1`, estamos reutilizando el mismo método. La palabra clave `this` se utiliza para referirse al objeto actual, permitiendo la reutilización eficiente del código.
 
-**Programación Funcional - JavaScript:**
+#### Programación Funcional - JavaScript
 
 En contraste con POO, la Programación Funcional mantiene separados los datos de las funciones. Veamos cómo realizar el mismo cálculo utilizando un enfoque funcional.
 
@@ -1507,7 +1507,7 @@ console.log(totalPrice); // Output: 120
 
 En este ejemplo, creamos una función `calculateTotalPrice` que toma los valores de `shoesPrice` y `taxRate` como argumentos y devuelve el resultado del cálculo. Luego, llamamos a esta función con valores específicos para obtener el mismo resultado, que es 120.
 
-**Programación Orientada a Objetos (OOP) - Clases en JavaScript:**
+#### Programación Orientada a Objetos (POO) - Clases en JavaScript
 
 En programación, cuando necesitas construir múltiples objetos con un conjunto específico de propiedades y métodos, las clases son una herramienta eficiente. En JavaScript, las clases se definen con la palabra clave `class`, seguida del nombre de la clase con mayúscula y un bloque de código. Aquí se utiliza una función constructora dentro de la clase para asignar parámetros a las propiedades de los objetos que se crearán a partir de la clase. Además, se pueden agregar métodos a la clase sin utilizar la palabra clave `function`, solo especificando el nombre del método.
 
@@ -1539,11 +1539,9 @@ console.log(carOne.make); // Salida: Toyota
 
 En este ejemplo, se crea la clase `Car` con un constructor que inicializa propiedades como `make`, `model`, `year`, y una propiedad adicional `turbo` que se establece en `false`. Se agrega un método `turboOn` para activar el turbo y se instancia la clase creando un objeto `carOne`. Los métodos y propiedades de la clase se acceden a través de este objeto.
 
-**Principios fundamentales de la Programación Orientada a Objetos (POO)**
+#### Principios fundamentales de la Programación Orientada a Objetos (POO)
 
 La Programación Orientada a Objetos (POO) es un paradigma que se basa en cuatro principios fundamentales: herencia, encapsulación, abstracción y polimorfismo. Estos principios proporcionan un marco sólido para el diseño de software, mejorando la modularidad, la reutilización de código y la organización de sistemas complejos.
-
-**Principios Fundamentales de la Programación Orientada a Objetos (POO) en JavaScript:**
 
 1. **Herencia:**
    La herencia en JavaScript se logra mediante la palabra clave `extends`. Una clase hija hereda propiedades y métodos de la clase padre.
@@ -1651,7 +1649,7 @@ La Programación Orientada a Objetos (POO) es un paradigma que se basa en cuatro
 
    Aquí, el mismo método `sound()` produce resultados diferentes según el objeto con el que se llama.
 
-**Constructores en JavaScript:**
+#### Constructores en JavaScript
 
 Los constructores en JavaScript son funciones especiales utilizadas para crear e inicializar objetos. Estos se invocan usando la palabra clave `new` y son útiles para crear múltiples instancias de un objeto con propiedades y métodos específicos. Aquí hay una explicación detallada junto con ejemplos de código:
 
@@ -1737,7 +1735,7 @@ pelicula1.reproducir();  // Salida: "Reproduciendo: Inception dirigida por Chris
 
 Estos ejemplos muestran diferentes formas de utilizar constructores en JavaScript para crear objetos con propiedades y métodos específicos. Los constructores son fundamentales en la programación orientada a objetos, ya que permiten la creación de instancias de objetos con una estructura predefinida.
 
-**Herencia**
+#### Herencia
 
 Para entender este principio, se define al prototipo, el cual es un objeto que puede contener propiedades compartidas por varios otros objetos, y este principio forma la base de la herencia en JavaScript.
 
@@ -1768,3 +1766,164 @@ console.log("Penguin1 has feathers:", penguin1.hasFeathers); // Salida: true
 ![image](https://github.com/JMDS2810/PROGRAMACION_CON_JAVASCRIPT/assets/112999455/7a26382c-3a37-4ba9-b52c-dbbf96c1f6b0)
 
 Este código refleja la creación de objetos ("águila1" y "pingüino1") utilizando un prototipo común ("pájaro"). Se destaca la capacidad de anular la propiedad `canFly` en el objeto "pingüino1" sin afectar al prototipo o a otros objetos.
+
+### Funciones avanzadas en JavaScript
+
+#### Desestructuración de matrices y objetos
+
+Para poder entender, se presenta un ejemplo práctico utilizando un objeto matemático incorporado en JavaScript. Se utiliza la palabra clave `let` y la sintaxis de desestructuración `{}` para crear una copia independiente de la propiedad `PI` del objeto matemático, almacenándola en una nueva variable llamada `pie`.
+
+Se destaca que intentar desestructurar una propiedad que no existe resultará en un valor indefinido. Además, se enfatiza que las variables desestructuradas son completamente independientes de las propiedades originales, demostrado mediante la comparación de valores y tipos de datos utilizando el operador de comparación estricta `===`.
+
+En el ejemplo, se modifica el valor de la variable `pie` y se muestra que ya no es igual a la propiedad original `PI`, lo que confirma la independencia de ambas.
+
+Con todo lo mencionado, se concluye que la desestructuración en JavaScript crea variables independientes sin conexión con las propiedades originales de los objetos.
+
+```javascript
+// Ejemplo de desestructuración de la propiedad PI de un objeto matemático
+let { PI: pie } = Math; // Creación de una variable independiente "pie"
+
+// Intentar desestructurar una propiedad que no existe resultará en un valor indefinido
+let { pi: piMinusc } = Math; // Esto devuelve undefined
+
+// Confirmar la independencia comparando valores y tipos de datos
+console.log(pie === Math.PI); // Devuelve false
+
+// Modificar el valor de la variable "pie"
+pie = 1;
+
+// Volver a comparar para demostrar la independencia
+console.log(pie === Math.PI); // Devuelve false
+```
+
+![image](https://github.com/JMDS2810/PROGRAMACION_CON_JAVASCRIPT/assets/112999455/ffeb217f-2891-4a8e-aebc-55f098af4ca0)
+
+Este código ejemplifica el proceso de desestructuración de la propiedad `PI` del objeto matemático y cómo la variable resultante es independiente de la propiedad original.
+
+#### For de bucles y objetos
+
+Para poder ver las diferencias entre los bucles `for...in` y `for...of` aplicados a objetos en JavaScript se proporciona un código que utiliza un objeto "coche" y su derivado "coche deportivo" para ilustrar las particularidades de estos bucles.
+
+El código comienza creando un objeto "coche" con propiedades como motor, dirección y velocidad. Luego, se crea un "coche deportivo" utilizando `Object.create()` para heredar las propiedades del "coche" y se le asigna una propiedad de velocidad rápida.
+
+Se presentan dos bucles `for`: el primero utiliza `for...in` para iterar sobre las propiedades del "coche deportivo" y el segundo utiliza `for...of` para iterar sobre las propiedades propias del "coche deportivo".
+
+El bucle `for...in` es señalado como poco fiable porque también itera sobre las propiedades del prototipo del objeto, no solo sobre las propias. Esto se ilustra al iterar sobre el "coche deportivo" y obtener propiedades del prototipo, como motor y dirección, además de la velocidad propia del "coche deportivo".
+
+En cambio, el bucle `for...of` se considera fiable ya que solo itera sobre las propiedades propias del objeto. En este caso, al iterar sobre el "coche deportivo", solo se obtiene la velocidad propia, como se espera.
+
+Se presenta una versión simplificada del código con comentarios eliminados y se ejecuta, confirmando la diferencia en la salida entre ambos bucles. El bucle `for...in` muestra propiedades del prototipo, mientras que el bucle `for...of` muestra solo propiedades propias.
+
+```javascript
+// Creación de un objeto "coche" con propiedades
+let coche = { motor: true, direccion: true, velocidad: 'lento' };
+
+// Creación de un "coche deportivo" heredando propiedades de "coche"
+let cocheDeportivo = Object.create(coche);
+cocheDeportivo.velocidad = 'rápida';
+
+// Bucle for...in para iterar sobre propiedades del "coche deportivo"
+for (let prop in cocheDeportivo) {
+    console.log(prop); // Itera sobre propiedades propias y del prototipo
+}
+
+// Bucle for...of para iterar sobre propiedades propias del "coche deportivo"
+for (let prop of Object.keys(cocheDeportivo)) {
+    console.log(prop); // Itera solo sobre propiedades propias
+}
+```
+
+![image](https://github.com/JMDS2810/PROGRAMACION_CON_JAVASCRIPT/assets/112999455/e90b26c5-e715-422a-b216-6cf7f267e9d3)
+
+Este código ejemplifica la creación de objetos, herencia de propiedades y la diferencia en la iteración de propiedades utilizando `for...in` y `for...of`.
+
+Para tener un mayor entendimiento, se presenta otro código similar al anterior.
+
+```javascript
+const car = {
+    engine: true,
+    steerign: true,
+    speed: "slow"
+}
+const sportsCar = Object.create(car);
+sportsCar.speed = "fast";
+console.log("The sportsCar Object: ", sportsCar);
+
+console.log('----- for-in is unreliable -----');
+for(prop in sportsCar){
+    console.log(prop);
+}
+console.log('🧐', "Iterating over object AND its prototype!");
+
+console.log('----- for-of is reliable -----');
+for(prop of Object.keys(sportsCar)){
+    console.log(prop + ":" + sportsCar[prop]);
+}
+console.log('🎯', "Iterating over object's OWN PROPERTIES only!");
+```
+
+**Explicación**
+
+El código crea dos objetos en JavaScript: un objeto básico llamado `car` y un objeto derivado llamado `sportsCar`. Luego, utiliza bucles `for...in` y `for...of` para iterar sobre las propiedades de `sportsCar` y muestra la diferencia en la salida.
+
+1. **Definición de Objetos:**
+   ```javascript
+   const car = {
+       engine: true,
+       steering: true,
+       speed: "slow"
+   }
+   ```
+   Se define un objeto llamado `car` con tres propiedades: `engine`, `steering`, y `speed`.
+
+   ```javascript
+   const sportsCar = Object.create(car);
+   ```
+   Se crea un nuevo objeto llamado `sportsCar` utilizando `Object.create(car)`, lo que significa que `sportsCar` hereda las propiedades del objeto `car`.
+
+   ```javascript
+   sportsCar.speed = "fast";
+   ```
+   Se modifica la propiedad `speed` del objeto `sportsCar` para asignarle el valor "fast".
+
+   ```javascript
+   console.log("The sportsCar Object: ", sportsCar);
+   ```
+   Se imprime en la consola el objeto `sportsCar` después de la modificación.
+
+2. **Bucle `for...in`:**
+   ```javascript
+   console.log('----- for-in is unreliable -----');
+   for(prop in sportsCar){
+       console.log(prop);
+   }
+   console.log('🧐', "Iterating over object AND its prototype!");
+   ```
+   Se utiliza un bucle `for...in` para iterar sobre las propiedades del objeto `sportsCar`. Sin embargo, se señala como "unreliable" porque también itera sobre las propiedades del prototipo (`car` en este caso). La salida incluirá tanto las propiedades propias como las heredadas.
+
+3. **Bucle `for...of`:**
+   ```javascript
+   console.log('----- for-of is reliable -----');
+   for(prop of Object.keys(sportsCar)){
+       console.log(prop + ":" + sportsCar[prop]);
+   }
+   console.log('🎯', "Iterating over object's OWN PROPERTIES only!");
+   ```
+   Se utiliza un bucle `for...of` para iterar sobre las propiedades del objeto `sportsCar`. Se utiliza `Object.keys(sportsCar)` para obtener solo las propiedades propias y, por lo tanto, evita iterar sobre las propiedades del prototipo. La salida incluirá solo las propiedades propias del objeto `sportsCar`.
+
+**Salida Esperada:**
+```
+The sportsCar Object:  { speed: 'fast' }
+----- for-in is unreliable -----
+speed
+engine
+steering
+🧐 Iterating over object AND its prototype!
+----- for-of is reliable -----
+speed:fast
+🎯 Iterating over object's OWN PROPERTIES only!
+```
+
+![image](https://github.com/JMDS2810/PROGRAMACION_CON_JAVASCRIPT/assets/112999455/0e8f4508-90a4-4b5d-9b53-775076fff8d3)
+
+En resumen, el código destaca la diferencia entre `for...in` y `for...of` al iterar sobre las propiedades de un objeto y cómo `for...of` puede utilizarse para iterar de manera confiable solo sobre las propiedades propias del objeto.
