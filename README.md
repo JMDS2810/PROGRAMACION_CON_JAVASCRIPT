@@ -1312,3 +1312,135 @@ El texto menciona tres tipos de valores vacíos en JavaScript: `null`, `undefine
 
    En este ejemplo, se crean dos variables, `emptyString1` y `emptyString2`, que contienen cadenas vacías. Ambas variables se imprimen y muestran como cadenas vacías.
 
+### Programación funcional
+
+La programación funcional se caracteriza por su enfoque en la clara separación entre datos y funciones, permitiendo que los datos existan fuera de las funciones. A continuación, se presenta un ejemplo práctico de programación funcional mediante la creación de un programa para la conversión de divisas.
+
+```javascript
+// Declaración de variables
+var currencyOne = 100;
+var currencyTwo = 0;
+var exchangeRate = 1.2;
+
+// Función de conversión de divisas
+function convertirDivisa(amount, rate) {
+  return amount * rate;
+}
+
+// Actualización de currencyTwo usando la función
+currencyTwo = convertirDivisa(currencyOne, exchangeRate);
+
+// Registro en la consola para probar el código
+console.log(currencyTwo); // Salida: 120
+```
+
+![image](https://github.com/JMDS2810/PROGRAMACION_CON_JAVASCRIPT/assets/112999455/3e7b3b9c-ccdb-4fdb-bcff-c064fa92c946)
+
+En el código de ejemplo, se declaran variables como currencyOne, currencyTwo, y exchangeRate, a las cuales se les asignan valores. La función convertirDivisa(amount, rate) se introduce para realizar la conversión, devolviendo el resultado de la multiplicación de amount por rate. La actualización de la variable currencyTwo se realiza llamando a esta función con los argumentos apropiados.
+
+Finalmente, se prueba el código registrando el valor actualizado de currencyTwo en la consola. Este ejemplo práctico ilustra cómo la programación funcional puede abordar un problema al separar claramente los datos y las funciones.
+
+### Llamada a funciones y recursividad
+
+A continuación, se mostrará un ejemplo para poder entender este punto. Se crea una función llamada "example" con varias líneas de registro de puntos en la consola. Se demuestra cómo, al agregar una línea que llama a la función dentro de sí misma, se crea un bucle infinito.
+
+Para evitar que la función se ejecute sin parar, se mejora el código introduciendo una condición de parada. En este caso, se agrega un contador y una estructura "if" que verifica si el contador llega a cero, deteniendo así la recursión. Este ejemplo práctico ilustra el concepto de recursión, que es una forma alternativa de ejecutar código repetitivo sin el uso de bucles.
+
+```javascript
+// Definición de la función recursiva llamada "example"
+function example(counter) {
+  // Imprimir el valor del contador en la consola
+  console.log(counter);
+
+  // Verificar si el contador llega a cero para detener la recursión
+  if (counter > 0) {
+    // Llamada recursiva reduciendo el contador en 1 en cada iteración
+    example(counter - 1);
+  } else {
+    // Si el contador llega a cero, detener la recursión
+    return;
+  }
+}
+
+// Llamar a la función "example" con un valor inicial para el contador (por ejemplo, 3)
+example(3);
+```
+
+![image](https://github.com/JMDS2810/PROGRAMACION_CON_JAVASCRIPT/assets/112999455/ab35af87-3c70-4460-a3a2-9542ab44fa4f)
+
+En este ejemplo, la función countDown toma un parámetro llamado counter que representa el número desde el cual comenzará a contar. La función imprime el valor actual del contador en la consola, luego se llama a sí misma con un contador reducido en 1 en cada iteración. La recursión se detiene cuando el contador llega a cero, momento en el cual se imprime un mensaje indicando que la recursión ha terminado.
+
+### Ámbito con var, let y const
+
+En JavaScript, el ámbito determina la accesibilidad del código, definiendo qué partes del programa pueden acceder a ciertas variables. Existen dos tipos de ámbito: global y local. El ámbito local se aplica a variables declaradas dentro de funciones, mientras que el ámbito global abarca todo el código fuera de las funciones.
+
+En la versión ES5 de JavaScript, solo las funciones podían crear un ámbito local. Con la introducción de ES6, se añadió un nuevo ámbito conocido como ámbito de bloques, el cual establece que las variables declaradas con `let` o `const` solo son accesibles dentro del bloque de código donde se crean.
+
+La palabra clave `var` es menos estricta que `let` y `const`, ya que permite el uso de la variable antes de declararla y permite la redeclaración de la misma variable. Además, las variables declaradas con `var` tienen un ámbito de función si se declaran fuera de funciones, siendo globales.
+
+En contraste, `let` y `const` son más estrictas. No permiten el uso de la variable antes de declararla y no permiten su redeclaración. Además, el alcance de las variables declaradas con `let` o `const` está limitado al bloque donde se crean, incluso dentro de instrucciones `if` y bucles. La recomendación es utilizar `let` si el valor de la variable puede cambiar y `const` si el valor es constante. 
+
+### Comparación de var, let y const
+
+#### Variables con `var`
+
+```javascript
+// Ejemplo con la palabra clave var
+console.log(user); // Error: user is not defined
+
+var user = "Mark";
+console.log(user); // Salida: Mark
+
+// Reasignación y redeclaración permitidas
+var user = "Mary";
+var user = "Joanna";
+var user = "Mark";
+console.log(user); // Salida: Mark
+```
+
+![image](https://github.com/JMDS2810/PROGRAMACION_CON_JAVASCRIPT/assets/112999455/bacc0862-9614-4120-97e3-823d33c1a2e0)
+
+**Explicación:**
+- Se muestra que una variable `var` puede ser accedida antes de su declaración, devolviendo `undefined`.
+- Se resalta que la reasignación y redeclaración de la misma variable con `var` no generan errores.
+
+### Variables con `let`:
+```javascript
+// Ejemplo con la palabra clave let
+// console.log(user); // Error: Cannot access 'user' before initialization
+
+let user;
+console.log(user); // Salida: undefined
+
+user = "Anna";
+// let user; // Error: Identifier 'user' has already been declared
+console.log(user); // Salida: Anna
+```
+
+![image](https://github.com/JMDS2810/PROGRAMACION_CON_JAVASCRIPT/assets/112999455/97d4e860-755c-487c-82c6-432f1b3f6f50)
+
+**Explicación:**
+- Se muestra que no se puede acceder a una variable `let` antes de su declaración.
+- Se destaca que, a diferencia de `var`, no se puede volver a declarar una variable `let`, pero sí se puede reasignar.
+
+### Variables con `const`:
+```javascript
+// Ejemplo con la palabra clave const
+// console.log(userConst); // Error: Cannot access 'userConst' before initialization
+
+const userConst = undefined;
+// const userConst = "Anna"; // Error: Missing initializer in const declaration
+console.log(userConst); // Salida: undefined
+
+// const userConst = "Anna"; // Error: Identifier 'userConst' has already been declared
+console.log(userConst); // Salida: undefined
+
+```
+
+**Explicación:**
+- Se demuestra que una variable const debe ser inicializada en el momento de la declaración, y se muestra un error si no se proporciona un valor.
+- Se destaca que una vez que una variable const es declarada e inicializada, no puede ser reasignada ni redeclarada.
+  
+![image](https://github.com/JMDS2810/PROGRAMACION_CON_JAVASCRIPT/assets/112999455/8e712d31-4f74-41d4-b7da-e0a77d04a910)
+
+Se aconseja elegir `let` o `const` en función de si se reasignarán o no los valores, indicando que `var` es más indulgente, mientras que `const` es más estricta.
