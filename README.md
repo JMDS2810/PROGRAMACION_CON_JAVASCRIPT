@@ -2103,3 +2103,242 @@ console.log("Taxed Items:", taxedItems);
 ![image](https://github.com/JMDS2810/PROGRAMACION_CON_JAVASCRIPT/assets/112999455/06bfb23f-6b86-4125-9723-3216aa1496a2)
 
 En este código, se utiliza el operador rest para desestructurar la matriz "top7" y obtener las primeras tres atracciones en variables individuales (`first`, `second`, `third`) y el resto de las atracciones en una nueva matriz llamada `secondVisit`. Además, se muestra un ejemplo de cómo el operador rest se puede utilizar en una función, en este caso, para crear una función `addTaxToPrices` que aplica un tipo impositivo a una lista de artículos utilizando el operador rest para recibir una cantidad variable de parámetros.
+
+### JavaScript en el navegador
+
+#### Módulos en JavaScript
+
+La introducción de los módulos en JavaScript, especialmente con ES6, ha permitido una mayor modularidad y reutilización de código. Antes de ES6, el manejo de funciones globales generaba problemas en proyectos más grandes. CommonJS surgió como un intento de solución, pero su sintaxis no era plenamente compatible con los navegadores. La llegada de los módulos ES6 ha mejorado esta situación, ofreciendo unidades de código independientes y reutilizables.
+
+A continuación, se presenta un ejemplo práctico utilizando etiquetas de script en un documento HTML. Se destaca la importancia del atributo `type` en la etiqueta `script` para especificar el tipo de contenido. Se menciona que, para evitar problemas de seguridad, es necesario ejecutar el archivo HTML en un servidor local, y se proporciona información adicional sobre la configuración de dicho servidor.
+
+```html
+<script type="module">
+  import greetingModule from 'greeting.js';
+  console.log(greetingModule.sayHello());
+</script>
+```
+#### DOM en JavaScript
+
+Se introduce el concepto de DOM (Modelo de Objeto del Documento) en JavaScript, comparándolo con un control remoto de televisión que permite cambiar el contenido de una página web. Se destaca que el DOM brinda un control detallado sobre las propiedades de los objetos de una página web, actuando como un "mando a distancia superpoderoso". 
+
+1. **Acceso a DevTools para interactuar con el DOM:**
+   ```javascript
+   // Acceso a las DevTools: Hacer clic derecho en la ventana del navegador y seleccionar "Inspeccionar"
+   ```
+
+2. **Ejemplo de manipulación del DOM con JavaScript:**
+   ```javascript
+   // Creación de un elemento h2
+   const h2 = document.createElement('h2');
+
+   // Actualización del elemento h2 con atributos y texto
+   h2.innerText = 'Esto es un encabezado h2';
+   h2.setAttribute('ID', 'sub-heading');
+   h2.setAttribute('class', 'secondary');
+
+   // Añadir el elemento al DOM
+   document.body.appendChild(h2);
+   ```
+   
+   Este código demuestra la creación de un elemento `h2`, actualización con atributos y texto, y su posterior añadido al DOM.
+
+#### Selectores en JavaScript
+
+La capacidad de JavaScript para manipular el DOM, permite realizar cambios dinámicos en el contenido HTML en tiempo real, como cambiar colores o mostrar mensajes emergentes al hacer clic en un botón. La clave para esta manipulación es la capacidad de localizar objetos específicos en el documento HTML utilizando selectores en JavaScript.
+
+El uso de selectores comienza con el objeto documento, que representa la página web almacenada en la memoria del navegador (DOM). Se introduce el método `querySelector` para localizar un elemento específico. Por ejemplo, al escribir `document.querySelector('p')`, se obtiene el primer elemento de párrafo, y este método puede utilizarse con otros elementos HTML, como anclas.
+
+Se presenta el método `querySelectorAll` para obtener todas las coincidencias de un selector en la página. Luego, se tienen métodos específicos, como `getElementById` para encontrar elementos por su ID y `getElementsByClassName` para localizar elementos por su clase. Ejemplos prácticos incluyen la búsqueda de un elemento con el ID "heading" y aquellos con la clase "txt".
+
+Se resalta la importancia de tener en cuenta que la palabra "element" es singular para ID y plural para nombres de clase. Se menciona que si un elemento no se encuentra, se devuelve `null` para ID y una colección vacía para nombres de clase. A continuación, se presentan los códigos de estos selectores en JavaScript.
+
+1. **querySelector para obtener el primer elemento de un tipo:**
+   ```javascript
+   const primerParrafo = document.querySelector('p');
+   ```
+
+2. **querySelectorAll para obtener todas las coincidencias de un tipo:**
+   ```javascript
+   const todosLosParrafos = document.querySelectorAll('p');
+   ```
+
+3. **getElementById para encontrar elementos por ID:**
+   ```javascript
+   const elementoHeading = document.getElementById('heading');
+   ```
+
+4. **getElementsByClassName para encontrar elementos por clase:**
+   ```javascript
+   const elementosConClaseTxt = document.getElementsByClassName('txt');
+   ```
+
+#### Gestión de eventos
+
+Se resalta la importancia de los eventos activados por el usuario en JavaScript, tales como el clic en un botón, y cómo dichos eventos pueden gestionarse mediante código JavaScript. Además, se señala la necesidad de escuchar eventos en secciones específicas de la página, introduciendo la idea de un controlador de eventos, una función dedicada a gestionar los eventos capturados.
+
+En el proceso, se emplea el método `addEventListener` como una de las formas más simples para escuchar eventos en elementos HTML. Se presenta un ejemplo concreto de cómo escuchar un clic en el cuerpo de una página web, abordando la obtención de una referencia al elemento, la creación de una función de manejo de clics y la vinculación de dicha función al evento de clic utilizando `addEventListener`.
+
+Adicionalmente, se aborda una alternativa para detectar eventos mediante el uso de atributos de eventos HTML. Se ofrece un segundo ejemplo en el cual se crea la función de manejo de clics denominada `handleClick2`. Se muestra cómo asignar esta función como un atributo `onclick` en un elemento HTML, específicamente, el encabezado (`H1`), lo cual activa el detector de eventos correspondiente.
+
+1. **addEventListener para escuchar clic en el cuerpo:**
+   ```javascript
+   const target = document.querySelector('body');
+
+   function handleClick() {
+     console.log('Se hizo clic en el cuerpo.');
+   }
+
+   target.addEventListener('click', handleClick);
+   ```
+
+2. **Atributos de eventos HTML para escuchar clic en el encabezado:**
+   ```javascript
+   function handleClick2() {
+     console.log('Se hizo clic en el encabezado.');
+   }
+   ```
+   ```html
+   <h1 onclick="handleClick2()">Encabezado</h1>
+   ```
+
+Estos ejemplos muestran cómo configurar detectores de eventos tanto con `addEventListener` como con atributos de eventos HTML.
+
+#### Actualización del contenido de una página web
+
+La actualización del contenido de una página web en JavaScript es un aspecto fundamental que involucra la manipulación del DOM y la gestión de eventos. A continuación, se explica cómo realizar esta actualización, tomando como referencia los temas previamente mencionados.
+
+1. **Captura de Entrada del Usuario:**
+   - La entrada del usuario se puede capturar mediante el método `prompt()`. Por ejemplo:
+
+     ```javascript
+     let answer = prompt('What is your name?');
+     ```
+
+2. **Manipulación del Contenido:**
+   - La entrada capturada se almacena en la variable `answer`. Para manipular este contenido, se puede emplear un elemento HTML `<h1>`. Se verifica que la entrada sea de tipo cadena antes de proceder.
+
+     ```javascript
+     let answer = prompt('What is your name?');
+     if (typeof(answer) === 'string') {
+         var h1 = document.createElement('h1');
+         h1.innerText = answer;
+         document.body.innerText = '';
+         document.body.appendChild(h1);
+     }
+     ```
+
+3. **Uso de Formularios HTML:**
+   - Se introducen formularios HTML como una alternativa más eficiente para manejar entradas del usuario. Un ejemplo de creación dinámica de un formulario con un campo de texto y un elemento `<h1>`:
+
+     ```javascript
+     var h1 = document.createElement('h1');
+     h1.innerText = "Type into the input to make this text change";
+
+     var input = document.createElement('input');
+     input.setAttribute('type', 'text');
+
+     document.body.innerText = '';
+     document.body.appendChild(h1);
+     document.body.appendChild(input);
+     ```
+
+4. **Escuchadores de Eventos:**
+   - Se configura un escuchador de eventos para el evento `change`, que se activa al presionar ENTER después de escribir en el campo de entrada. Se muestra cómo actualizar el contenido del `<h1>` con el valor obtenido del campo de entrada.
+
+     ```javascript
+     var h1 = document.createElement('h1');
+     h1.innerText = "Type into the input to make this text change";
+
+     var input = document.createElement('input');
+     input.setAttribute('type', 'text');
+
+     document.body.innerText = '';
+     document.body.appendChild(h1);
+     document.body.appendChild(input);
+
+     input.addEventListener('change', function() {
+         h1.innerText = input.value;
+     });
+     ```
+La combinación de la manipulación del DOM y el manejo de eventos en JavaScript permite la creación de sitios web interactivos y notables. Este enfoque proporciona flexibilidad para actualizar dinámicamente el contenido de una página web en respuesta a las acciones del usuario.
+
+#### Mover datos en la web
+
+**Mover Datos en la Web con JSON:**
+
+La web moderna se compone de innumerables páginas web, servicios conectados y bases de datos. Para facilitar el intercambio de datos entre estos diversos componentes, se emplea el formato JSON (JavaScript Object Notation), ideado por Douglas Crockford en 2001.
+
+Antes de JSON, XML era el formato común para el intercambio de datos, pero su sintaxis compleja y la falta de interoperabilidad con JavaScript condujeron a la adopción de JSON. Este formato se destaca por su ligereza y su sintaxis similar a la de un objeto JavaScript encadenado, lo que lo hace ideal para el manejo eficiente en código JavaScript.
+
+JSON no solo sirve como formato de intercambio de datos, sino también como formato de archivo. Por ejemplo, al acceder a datos de terceros, se pueden obtener archivos JSON y convertirlos en objetos JavaScript para su manipulación local.
+
+**Uso Práctico de JSON:**
+
+Supongamos que se descarga un archivo JSON llamado `stockPrices.json` que contiene información sobre movimientos de precios de acciones. Este archivo puede convertirse en un objeto JavaScript, y su estructura permitirá acceder fácilmente a información específica.
+
+```javascript
+const currencyInfo = {
+    USD: {
+        // ...
+    },
+    GBP: {
+        // ...
+    },
+    EUR: {
+        // ...
+    }
+};
+```
+
+En este ejemplo, se accede a datos específicos, como los relacionados con la propiedad USD, para obtener la información necesaria en un momento dado.
+
+**Reglas y Consideraciones de JSON:**
+
+JSON es una cadena que debe seguir reglas específicas. Solo un subconjunto de valores JavaScript puede ser encadenado y analizado, incluyendo primitivas como cadenas, números, booleanos y nulos, así como objetos y matrices (sin funciones).
+
+Algunas reglas clave incluyen el uso de comillas dobles para todas las claves de objetos, la delimitación por comas en objetos y matrices, y la representación adecuada de propiedades de cadena, número y booleana.
+
+Es importante notar que JSON es más estricto que JavaScript en cuanto a la formación del código, siendo considerado un subconjunto de este lenguaje.
+
+En resumen, JSON facilita la transferencia y manipulación de datos en la web, ofreciendo un formato ligero y fácilmente manejable en código JavaScript. Su adopción generalizada se debe a su eficiencia y compatibilidad con el entorno web moderno.
+
+#### Notación de objetos JavaScript - JSON
+
+**Conversión entre JSON y Objetos JavaScript:**
+
+Se va a explorar el proceso de conversión entre cadenas JSON y objetos JavaScript, una habilidad esencial al trabajar con datos en la web. Se explicará cómo transformar una cadena JSON en un objeto JavaScript y viceversa.
+
+**Conversión de JSON a Objeto JavaScript:**
+
+Cuando se maneja una cadena JSON en JavaScript, es común convertirla en un objeto JavaScript para facilitar su manipulación. Utilizamos el objeto JSON global y su método `parse` para lograr esto. Aquí tienes un ejemplo:
+
+```javascript
+const JSONstr = '{"saludo": "hola"}';
+const aPlainObj = JSON.parse(JSONstr);
+
+// Manipulación del objeto JavaScript resultante
+aPlainObj.saludo = "¡Hola de nuevo!";
+console.log(aPlainObj.saludo);  // Salida: ¡Hola de nuevo!
+```
+
+En este código, se firma una cadena JSON a la variable `JSONstr` y luego se utiliza `JSON.parse` para convertirla en un objeto JavaScript (`aPlainObj`). Posteriormente, se manipula la propiedad `saludo` del objeto como cualquier otro objeto JavaScript.
+
+**Conversión de Objeto JavaScript a JSON:**
+
+Asimismo, es posible convertir un objeto JavaScript en una cadena JSON utilizando el método `stringify` del objeto JSON. Aquí tienes un ejemplo:
+
+```javascript
+const datos = { nombre: "John", edad: 25, ciudad: "New York" };
+const JSONString = JSON.stringify(datos);
+
+// Resultado: '{"nombre": "John", "edad": 25, "ciudad": "New York"}'
+```
+
+En este caso, se declara un objeto llamado `datos` y se utiliza `JSON.stringify` para convertirlo en una cadena JSON (`JSONString`). Es importante notar que las claves y valores en la sintaxis JSON deben estar entre comillas dobles.
+
+**Consideraciones y Limitaciones:**
+
+Al trabajar con JSON, es crucial recordar que las cadenas JSON no pueden contener funciones y no permiten comentarios JavaScript. Además, al usar `stringify` en un objeto JavaScript que contiene métodos, esos métodos se excluyen del resultado. Esto es esencial al interactuar con APIs para recuperar datos.
+
+Esta habilidad de convertir entre JSON y objetos JavaScript se vuelve fundamental al procesar y manipular datos en aplicaciones web, especialmente al trabajar con APIs. Practicar esta técnica es esencial para cualquier desarrollador web.
