@@ -2343,7 +2343,393 @@ Al trabajar con JSON, es crucial recordar que las cadenas JSON no pueden contene
 
 Esta habilidad de convertir entre JSON y objetos JavaScript se vuelve fundamental al procesar y manipular datos en aplicaciones web, especialmente al trabajar con APIs. Practicar esta técnica es esencial para cualquier desarrollador web.
 
-### Node y NPM
+#### Entornos de JavaScript - Node y NPM
 
+**Análisis y Resumen del Texto:**
 
+En la transición a Node.js, se destaca que antes de su introducción, los desarrolladores utilizaban diferentes tecnologías para crear backends, como PHP, Python, C-sharp, Ruby y Java. Node.js permitió el uso de JavaScript tanto en el front-end como en el back-end, facilitando la creación de aplicaciones web completas con un único lenguaje.
+
+Node.js es presentado como un entorno independiente que puede ejecutarse en diversos contextos, como la línea de comandos, una aplicación de escritorio o el back-end de una aplicación web. Se menciona la existencia del administrador de paquetes npm, que permite la gestión de bibliotecas y frameworks como módulos de Node.js.
+
+El proceso de instalación y uso de Node.js y npm se explica detalladamente. Se muestra cómo ejecutar comandos como `node` para ejecutar archivos JavaScript o `npm` para instalar módulos desde el repositorio npm. Además, se introduce el concepto de `package.json`, un archivo que contiene las instrucciones y dependencias del proyecto, facilitando su portabilidad y compartición con otros desarrolladores.
+
+Finalmente, se destaca que al ejecutar `npm install`, se instalan las dependencias del proyecto, y se enfatiza que a veces estas dependencias pueden tener sus propias dependencias, lo que se traduce en un volumen significativo de datos que se descargan en la carpeta de módulos de Node.js.
+
+1. **Ejecución de Comandos Básicos:**
+   ```javascript
+   // Ejecutar el comando node desde la línea de comandos
+   node archivo.js
+
+   // Ejecutar el comando npm desde la línea de comandos
+   npm install
+   ```
+
+2. **Uso de npm para Instalar un Módulo:**
+   ```javascript
+   // Instalar el módulo llamado 'lowercase'
+   npm install lowercase
+
+   // Importar y usar el módulo en el código
+   const lowercase = require('lowercase');
+   ```
+
+3. **Creación de un Proyecto y archivo `package.json`:**
+   ```bash
+   // Crear un nuevo proyecto e interactuar con Node.js y npm
+   npm init
+
+   // Contenido del archivo package.json
+   {
+     "name": "nombre-proyecto",
+     "version": "1.0.0",
+     "dependencies": {
+       "lowercase": "^1.0.0"
+     }
+   }
+   ```
+
+Estos fragmentos de código y ejemplos resumen las acciones clave mencionadas en el texto relacionadas con Node.js y npm.
+
+**Instalación de Node y NPM**
+
+A continuación, se proporciona la orientación sobre la verificación y la instalación de Node.js y npm en diferentes sistemas operativos, específicamente en Windows, Mac OS utilizando Homebrew, y Ubuntu. Además, se sugiere mejorar la redacción para una mayor claridad y estructura.
+
+1. **Verificación de la Instalación:**
+
+   - **Windows:**
+     Para verificar la instalación de Node.js y npm en Windows, utilice la combinación de teclas WINKEY+r para abrir la ventana Ejecutar. Ingrese `cmd` y presione Enter para abrir el símbolo del sistema. Luego, ejecute `node --version` y `npm --version` para confirmar las versiones instaladas.
+
+   - **Ubuntu (Linux):**
+     En Ubuntu, abra una nueva ventana bash (terminal) con CTRL+ALT+t. Dentro de la ventana, ejecute `node --version && npm --version` para visualizar ambas versiones de Node.js y npm.
+
+2. **Instalación:**
+
+   - **Windows:**
+     Si Node.js y npm no están instalados en Windows, se sugiere visitar el sitio web oficial de Node.js (https://nodejs.org). Descargue la versión LTS y siga las instrucciones de instalación.
+
+   - **Mac OS con Homebrew:**
+     En el caso de Mac OS, se requiere instalar Xcode antes de Homebrew. Ejecute `xcode-select --install` en un terminal para instalar Xcode. Luego, instale Homebrew desde su sitio web oficial (https://brew.sh) utilizando el comando proporcionado. Después de instalar Homebrew, ejecute `brew install node` para instalar Node.js.
+
+   - **Ubuntu:**
+     En Ubuntu, abra una ventana bash con CTRL+ALT+t. Actualice los repositorios con `sudo apt update` y luego instale Node.js con `sudo apt install nodejs`.
+
+Estas instrucciones proporcionan una guía detallada para verificar la instalación existente y realizar una instalación nueva en diferentes sistemas operativos. La mejora en la redacción busca ofrecer una estructura más clara y fácil de seguir para los usuarios.
+
+#### Pruebas
+
+**Resumen y Análisis:**
+
+Se sabe de la importancia de probar el código JavaScript durante el proceso de desarrollo. Por ende, se destaca la necesidad de verificar que el código funcione correctamente antes de implementarlo. El enfoque principal se centra en la creación de pruebas para una función específica, en este caso, la función `concatStrings`. También se introduce el concepto de refactorización y el ciclo rojo-verde-refactor, fundamental en el Desarrollo Dirigido por Pruebas (TDD).
+
+1. **Creación de Pruebas:**
+   
+   - Se inicia codificando una función `concatStrings` que une dos cadenas dadas como argumentos.
+   - Se menciona la limitación de los comentarios para describir expectativas y se introduce la utilidad de los marcos de pruebas en JavaScript.
+
+   ```javascript
+   // Ejemplo de función concatStrings
+   function concatStrings(a, b) {
+     return a + b;
+   }
+
+   // Uso de comentarios para describir expectativas
+   // concatStrings('abc', 'def') debe devolver 'abcdef'
+   ```
+
+2. **Uso de Pruebas Automatizadas:**
+
+   - Se introduce el uso de pruebas automatizadas para verificar el comportamiento esperado de la función.
+
+   ```javascript
+   // Uso de pruebas con JEST
+   test('concatStrings debe devolver la concatenación de las cadenas', () => {
+     expect(concatStrings('abc', 'def')).toBe('abcdef');
+   });
+   ```
+
+3. **Ciclo Rojo-Verde-Refactor (TDD):**
+
+   - Se explica el ciclo TDD, donde se escribe una prueba que falla (rojo), se ajusta el código para que pase la prueba (verde), y luego se refactoriza el código sin cambiar los resultados.
+
+   ```javascript
+   // Ejemplo de ciclo TDD
+   test('concatStrings debe devolver la concatenación de las cadenas', () => {
+     expect(concatStrings('abc', 'def')).toBe('abcdef');
+   });
+   ```
+
+4. **Ventajas de las Pruebas:**
+
+   - Se resalta la utilidad de las pruebas, como la capacidad de ejecutarlas automáticamente, repetirlas sin esfuerzo y verificar expectativas.
+
+   ```javascript
+   // Ventajas de las pruebas
+   // - Ejecutable automáticamente
+   // - Repetible sin costo significativo
+   ```
+
+Este enfoque ayuda a garantizar la concisión, claridad y repetibilidad del código, así como a mantener la integridad del mismo durante su desarrollo continuo. Además, destaca la importancia de seguir el ciclo TDD para mejorar y optimizar el código de manera constante.
+
+**Tipos de pruebas**
+
+Se tienen 3 principales tipos de pruebas: pruebas de integración, pruebas unitarias y pruebas end-to-end (E2E). Se enfatiza que las pruebas son esenciales para confirmar que el software se comporta según los requisitos establecidos. Además, se menciona que la forma de abordar las pruebas puede variar según el rol y las motivaciones del profesional de desarrollo.
+
+1. **Definición de Pruebas de Software:**
+   
+   - Las pruebas de software son el acto de confirmar que el software funciona según los requisitos establecidos.
+   - Se registran las expectativas como requisitos de software.
+
+   ```javascript
+   // Definición de pruebas de software
+   // Confirmar que el software funciona según los requisitos
+   ```
+
+2. **Tipos de Pruebas:**
+
+   - **Pruebas End-to-End (E2E):**
+     - Ejemplo: Un fabricante de ordenadores portátiles prueba portátiles encendiéndolos y usándolos como lo haría un usuario normal.
+     - Enfoque: Mímica de la interacción del usuario con la aplicación web.
+     - Observación: No es necesario que la persona que realiza las pruebas sea un desarrollador.
+
+   ```javascript
+   // Ejemplo de pruebas E2E
+   // Imitar la interacción del usuario con la aplicación web
+   ```
+
+   - **Pruebas de integración:**
+     - Comprueban cómo interactúan las partes del sistema entre sí.
+     - Ejemplos: Pruebas de reacción de software, pruebas de integración de bibliotecas y enzimas.
+     - Observación: Más rápidas y económicas que las pruebas E2E, pero más lentas y costosas que las pruebas unitarias.
+
+   ```javascript
+   // Ejemplos de pruebas de integración
+   // Comprobar la interacción de las partes del sistema
+   ```
+
+   - **Pruebas unitarias:**
+     - Proceso de probar las unidades más pequeñas del código fuente de forma aislada.
+     - Ejemplo: Pruebas de funciones o métodos, unidades más pequeñas de código comprobable en JS.
+     - Observación: Independientes, rápidas de ejecutar y fáciles de escribir.
+
+   ```javascript
+   // Ejemplo de pruebas unitarias
+   // Probar unidades pequeñas del código de forma aislada
+   ```
+
+3. **Pirámide de pruebas:**
+
+   - Representación de tres niveles de pruebas: Unitarias en la base, Integración en el centro y End-to-End en la cima.
+   - Se describe la velocidad y el costo relativos de cada tipo de prueba.
+
+   ```javascript
+   // Representación de la pirámide de pruebas
+   // - Pruebas unitarias (base): Mayor velocidad, menor costo
+   // - Pruebas de integración (centro): Velocidad y costo promedio
+   // - Pruebas E2E (cima): Más lentas y caras de ejecutar
+   ```
+
+#### Introducción a Jest
+
+**Resumen y Análisis:**
+
+Siempre es necesario probar el código en JavaScript y por ende, en esta parte se destaca el uso del marco de pruebas Jest para abordar este requisito. Se mencionan características clave del Jest, como la cobertura del código, simulaciones y pruebas de instantáneas. A continuación, se analizan los puntos clave:
+
+1. **Pruebas en JavaScript:**
+   
+   - Se destaca la importancia de probar el código para asegurarse de que funcione según lo previsto.
+   - JavaScript no tiene funcionalidades de prueba integradas, y se mencionan bibliotecas como Jasmine, Mocha, Karma y QUnit.
+
+   ```javascript
+   // Destacar la necesidad de pruebas en JavaScript
+   // Mencionar bibliotecas de prueba como Jasmine, Mocha, Karma y QUnit
+   ```
+
+2. **Marco de pruebas Jest:**
+
+   - Jest es un marco de pruebas de JavaScript utilizado comúnmente para probar código en React y otros frameworks.
+   - Admite la cobertura del código para medir el porcentaje de código cubierto por pruebas.
+   - Mayor cobertura del código reduce la probabilidad de errores no identificados.
+   - Introducción al concepto de burla (mocking) para separar código de dependencias y realizar pruebas unitarias independientes.
+
+   ```javascript
+   // Destacar características de Jest: Cobertura de código, burlas, pruebas unitarias
+   ```
+
+3. **Cobertura del código:**
+
+   - La cobertura del código mide el porcentaje de código cubierto por pruebas.
+   - Mayor cobertura reduce la probabilidad de errores no identificados.
+
+   ```javascript
+   // Definición de cobertura del código y su importancia
+   ```
+
+4. **Simulaciones (Burlas):**
+
+   - La simulación permite separar el código de las dependencias para realizar pruebas unitarias independientes.
+   - Ejemplo de simulación: Simular datos como si vinieran del servidor cuando provienen del cliente.
+   - Evita cuellos de botella al permitir que los desarrolladores trabajen de manera independiente en diferentes partes de la aplicación.
+
+   ```javascript
+   // Introducción a la simulación y su utilidad
+   ```
+
+5. **Pruebas asincrónicas en Jest:**
+
+   - Jest facilita la prueba de código asincrónico sin configuraciones difíciles.
+   - Las pruebas asincrónicas son relativamente fáciles de codificar, incluso para principiantes en el framework.
+
+   ```javascript
+   // Destacar la facilidad de prueba de código asincrónico en Jest
+   ```
+
+6. **Pruebas de instantáneas:**
+
+   - Se mencionan las pruebas de instantáneas utilizadas para verificar la ausencia de regresiones en el DOM después de cambios en el código.
+
+   ```javascript
+   // Descripción de las pruebas de instantáneas y su utilidad
+   ```
+
+7. **Conclusión:**
+
+   - Se concluye señalando que el lector ahora está familiarizado con el proceso de prueba en JavaScript utilizando Jest.
+
+   ```javascript
+   // Conclusión
+   // El lector está familiarizado con las pruebas en JavaScript con Jest
+   ```
+
+**Pruebas en Jest**
+
+A continuación se muestran los pasos para instalar los paquetes necesarios para probar código JavaScript con el marco de Jest y configura una prueba básica. 
+
+1. **Creación de la función AddFive:**
+   
+   - Se menciona la necesidad de escribir una función que sume cinco a un valor.
+   - Se crea un nuevo archivo llamado `addFive.js`.
+   - El código de la función `addFive` se define en el archivo.
+
+   ```javascript
+   // Creación del archivo addFive.js y la función addFive
+   ```
+
+2. **Configuración del entorno de pruebas:**
+
+   - Se verifica si Node.js y NPM están instalados en el sistema.
+   - Se identifica que Jest no está instalado globalmente en la máquina.
+
+   ```javascript
+   // Verificación de la instalación de Node.js y NPM
+   // Identificación de falta de instalación global de Jest
+   ```
+
+3. **Configuración de Package.json y instalación de Jest:**
+
+   - Se utiliza el comando `npm init` para crear un archivo `package.json`.
+   - Jest se instala localmente para el proyecto usando el comando `npm install --save-dev jest`.
+
+   ```javascript
+   // Configuración de package.json
+   // Instalación local de Jest
+   ```
+
+4. **Configuración de pruebas:**
+
+   - Se crea un archivo de prueba llamado `AddFive.test.js`.
+   - La función `addFive` se importa para ser probada.
+
+   ```javascript
+   // Creación de archivo de prueba AddFive.test.js
+   // Importación de la función addFive para la prueba
+   ```
+
+5. **Configuración y ejecución de la Prueba:**
+
+   - Se utiliza el método de prueba (`test`) de Jest para definir expectativas.
+   - La función de prueba comprueba que `addFive` devuelve el número más cinco.
+
+   ```javascript
+   // Configuración y ejecución de la prueba usando Jest
+   ```
+Se presenta el ejemplo de AddFive:
+
+**Código de la Función addFive:**
+
+```javascript
+// Archivo addFive.js
+function addFive(value) {
+  return value + 5;
+}
+
+module.exports = addFive;
+```
+
+**Configuración del Package.json:**
+
+```json
+// Contenido del archivo package.json después de ejecutar npm init
+{
+  "name": "mi-proyecto",
+  "version": "1.0.0",
+  "description": "Proyecto de ejemplo",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Tu Nombre",
+  "license": "ISC"
+}
+```
+
+**Instalación de Jest:**
+
+```bash
+npm install --save-dev jest
+```
+
+**Archivo de Prueba AddFive.test.js:**
+
+```javascript
+// Archivo AddFive.test.js
+const addFive = require('./addFive');
+
+test('Suma cinco al valor', () => {
+  expect(addFive(7)).toBe(12);
+});
+
+test('Suma cinco al valor negativo', () => {
+  expect(addFive(-3)).toBe(2);
+});
+```
+
+Estos ejemplos asumen que los archivos se encuentran en el mismo directorio. Puedes ajustar las rutas según la estructura de tu proyecto. Luego, para ejecutar las pruebas, simplemente usa el comando:
+
+```bash
+npm run test
+```
+
+Esto ejecutará Jest y mostrará los resultados de las pruebas en la consola.
+
+#### TDD (desarrollo basado en pruebas)
+
+El TDD es un proceso de escritura de código que busca satisfacer los requisitos mediante la creación de pruebas antes de la implementación real. El enfoque TDD implica un ciclo de trabajo que incluye las fases de prueba fallida (Rojo), prueba pasada (Verde) y refactorización (mejora del código sin cambiar la funcionalidad). Entre los beneficios del TDD se destaca la minimización de regresiones, la obtención de pruebas automatizadas y rápidas, así como la documentación efectiva del sistema, facilitando la integración de nuevos miembros al equipo de desarrollo. En resumen, el TDD, al invertir la secuencia tradicional de desarrollo, contribuye significativamente a la calidad y mantenimiento eficiente del software a lo largo del tiempo.
+
+A continuación se muestra un ejemplo.
+
+*Ejemplo de prueba (TDD):*
+
+```javascript
+// Archivo de prueba (ej. Keys.test.js)
+test('Existencia de la función estadoDeLasLlaves', () => {
+  expect(estadoDeLasLlaves).toBeDefined();
+});
+
+test('Registro del estado de las llaves', () => {
+  const keysState = true;
+  expect(estadoDeLasLlaves(keysState)).toBe('Keys state: true');
+});
+```
+
+Este ejemplo representa una prueba ficticia que se ajusta al ciclo de TDD.
 
