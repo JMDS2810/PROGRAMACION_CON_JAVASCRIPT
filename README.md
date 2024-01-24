@@ -2342,3 +2342,8 @@ En este caso, se declara un objeto llamado `datos` y se utiliza `JSON.stringify`
 Al trabajar con JSON, es crucial recordar que las cadenas JSON no pueden contener funciones y no permiten comentarios JavaScript. Además, al usar `stringify` en un objeto JavaScript que contiene métodos, esos métodos se excluyen del resultado. Esto es esencial al interactuar con APIs para recuperar datos.
 
 Esta habilidad de convertir entre JSON y objetos JavaScript se vuelve fundamental al procesar y manipular datos en aplicaciones web, especialmente al trabajar con APIs. Practicar esta técnica es esencial para cualquier desarrollador web.
+
+### Node y NPM
+
+
+
